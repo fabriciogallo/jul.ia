@@ -30,13 +30,10 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* No mobile, removemos overflow:hidden para permitir scroll na página inteira */
   overflow: hidden;
 }
 
-/* ================================================
-   TOPBAR
-   ================================================ */
+/* Area Topbar */
 .topbar {
   background: var(--bg-topbar);
   height: 56px;
@@ -62,7 +59,6 @@ body {
   font-size: 12px;
   color: #ccc;
   letter-spacing: 1px;
-  /* Evita que o logo encolha */
   flex-shrink: 0;
 }
 
@@ -88,7 +84,6 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  /* Evita que a área direita encolha */
   flex-shrink: 0;
 }
 
@@ -118,18 +113,14 @@ body {
   display: block;
 }
 
-/* ================================================
-   LAYOUT PRINCIPAL
-   ================================================ */
+/* Area Main */
 .main-wrapper {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
 
-/* ================================================
-   SIDEBAR
-   ================================================ */
+/* Area Sidebar */
 .sidebar {
   width: 72px;
   background: var(--bg-sidebar);
@@ -139,7 +130,6 @@ body {
   padding: 16px 0;
   gap: 6px;
   flex-shrink: 0;
-  /* Sem overflow aqui — no desktop não precisa de scroll */
   overflow: hidden;
 }
 
@@ -157,6 +147,7 @@ body {
     background 0.2s,
     color 0.2s;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .sidebar .nav-icon:hover,
@@ -173,9 +164,7 @@ body {
   flex: 1;
 }
 
-/* ================================================
-   ÁREA DE CONTEÚDO
-   ================================================ */
+/* Area Content */
 .content-area {
   flex: 1;
   padding: 16px;
@@ -185,9 +174,7 @@ body {
   gap: 16px;
 }
 
-/* ================================================
-   CARDS
-   ================================================ */
+/* Cards */
 .dash-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -208,9 +195,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* ================================================
-   GRID DE MÉTRICAS (4 cards no topo)
-   ================================================ */
 .metrics-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -230,16 +214,14 @@ body {
   color: var(--text-mid);
 }
 
-/* ================================================
-   BADGES E STATUS
-   ================================================ */
+/* /* BADGES E STATUS */
 .badge-status {
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 1.5px;
   padding: 3px 8px;
   border-radius: 4px;
-  white-space: nowrap; /* Evita que o texto quebre */
+  white-space: nowrap;
 }
 
 .badge-normal {
@@ -266,9 +248,6 @@ body {
   font-size: 11px;
 }
 
-/* ================================================
-   BARRAS DE PROGRESSO (N2 e O2)
-   ================================================ */
 .gas-label {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -293,9 +272,6 @@ body {
   background: var(--accent-green);
 }
 
-/* ================================================
-   LINHAS DE STATUS (dentro dos cards)
-   ================================================ */
 .status-row {
   display: flex;
   justify-content: space-between;
@@ -321,9 +297,6 @@ body {
   background: #2196f3;
 }
 
-/* ================================================
-   BADGE HIDROPONIA
-   ================================================ */
 .hidro-badge {
   background: #e8f5e9;
   border-radius: 50%;
@@ -336,9 +309,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ================================================
-   LINHA INFERIOR (Topografia + Coluna Direita)
-   ================================================ */
 .bottom-row {
   display: grid;
   grid-template-columns: 1fr 380px;
@@ -346,9 +316,6 @@ body {
   align-items: start;
 }
 
-/* ================================================
-   CARD DE TOPOGRAFIA / VÍDEO
-   ================================================ */
 .topo-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -382,18 +349,12 @@ body {
   object-fit: cover;
 }
 
-/* ================================================
-   COLUNA DIREITA
-   ================================================ */
 .right-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* ================================================
-   EQUIPAMENTOS EXTERNOS
-   ================================================ */
 .equip-img {
   width: 100%;
   height: 110px;
@@ -436,9 +397,7 @@ body {
   color: var(--accent-green);
 }
 
-/* ================================================
-   SAÚDE DA TRIPULAÇÃO
-   ================================================ */
+/* DA TRIPULAÇÃO */
 .health-alert {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -539,9 +498,7 @@ body {
   font-weight: 700;
 }
 
-/* ================================================
-   STATUS BAR (rodapé)
-   ================================================ */
+/* STATUS BAR (rodapé)*/
 .statusbar {
   background: #1a1a1a;
   height: 32px;
@@ -550,7 +507,7 @@ body {
   padding: 0 20px;
   gap: 32px;
   flex-shrink: 0;
-  overflow: hidden; /* Sem scroll visual no desktop */
+  overflow: hidden;
 }
 
 /* Esconde a barra de scroll da statusbar no mobile */
@@ -577,51 +534,38 @@ body {
   color: #fff;
 }
 
-/* ================================================
-   RESPONSIVIDADE — TABLET (≤ 1100px)
-   ================================================ */
+/* RESPONSIVIDADE — TABLET (≤ 1100px)*/
 @media (max-width: 1100px) {
-  /* Métricas: 2 colunas */
   .metrics-row {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Bottom row: coluna única (topografia em cima, direita embaixo) */
   .bottom-row {
     grid-template-columns: 1fr;
     align-items: stretch;
   }
 
-  /* Vídeo menor */
   .topo-video {
     height: 220px;
   }
 }
 
-/* ================================================
-   RESPONSIVIDADE — MOBILE (≤ 768px)
-   Aqui está o principal bloco de ajustes para celular
-   ================================================ */
+/* RESPONSIVIDADE — MOBILE (≤ 768px)*/
 @media (max-width: 768px) {
-  /* ------------------------------------------
-     BODY: permite scroll vertical na página toda
-     ------------------------------------------ */
   body {
     height: auto;
     min-height: 100vh;
     overflow: auto;
   }
 
-  /* ------------------------------------------
-     TOPBAR: título menor e menos espaços
-     ------------------------------------------ */
+  /* TOPBAR: título menor e menos espaços*/
   .topbar {
     padding: 0 12px;
     gap: 10px;
   }
 
   .topbar-title {
-    font-size: 14px; /* Era 18px — reduz para caber no mobile */
+    font-size: 14px;
     letter-spacing: 2px;
   }
 
@@ -629,45 +573,36 @@ body {
     gap: 10px;
   }
 
-  /* ------------------------------------------
-     LAYOUT PRINCIPAL: muda de linha → coluna
-     A sidebar vai para baixo (como app mobile)
-     ------------------------------------------ */
+  /* LAYOUT PRINCIPAL: muda de linha → coluna
+     A sidebar vai para baixo (como app mobile)*/
   .main-wrapper {
-    flex-direction: column; /* Sidebar vai para baixo */
+    flex-direction: column;
     overflow: visible;
     height: auto;
   }
 
-  /* ------------------------------------------
-     SIDEBAR MOBILE: vira uma barra de navegação
-     horizontal na parte inferior da tela
-     ------------------------------------------ */
+  /* SIDEBAR MOBILE: vira uma barra de navegação horizontal na parte inferior da tela*/
   .sidebar {
-    width: 100%; /* Ocupa toda a largura */
-    height: 60px; /* Altura fixa de barra */
-    flex-direction: row; /* Ícones na horizontal */
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
     padding: 0 8px;
     gap: 0;
-    order: 2; /* Vai depois do conteúdo */
+    order: 2;
 
-    /* Fica fixo na parte inferior da tela */
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 200;
 
-    /* Permite rolar horizontalmente se tiver muitos ícones */
     overflow-x: auto;
     overflow-y: hidden;
   }
 
-  /* Esconde a barra de scroll da sidebar */
   .sidebar::-webkit-scrollbar {
     display: none;
   }
 
-  /* Ícones da sidebar ficam menores */
   .sidebar .nav-icon {
     width: 40px;
     height: 40px;
@@ -679,7 +614,6 @@ body {
     display: none;
   }
 
-  /* CONTENT AREA: ocupa toda a tela Padding inferior para não ficar embaixo da sidebar*/
   .content-area {
     overflow: visible;
     height: auto;
@@ -698,12 +632,10 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* VÍDEO DO SETOR ALFA: altura adequada pro mobile*/
   .topo-video {
     height: 200px;
   }
 
-  /* DA TRIPULAÇÃO: ajusta grid interno*/
   .health-body-row {
     grid-template-columns: 80px 1fr;
   }
@@ -716,12 +648,10 @@ body {
     height: 120px;
   }
 
-  /* EQUIPAMENTOS: imagem menor*/
   .equip-img {
     height: 90px;
   }
 
-  /* STATUS BAR: itens menores e mais compactos*/
   .statusbar {
     gap: 16px;
     padding: 0 12px;

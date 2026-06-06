@@ -1,0 +1,220 @@
+/* ============================================================
+   ENERGIA.CSS — Mobile First
+   Breakpoints Bootstrap:
+     sm  → min-width: 576px
+     md  → min-width: 768px
+     lg  → min-width: 992px
+   ============================================================ */
+
+/* Utilitários de texto/cor usados na página */
+.font-mono   { font-family: var(--font-mono); }
+.text-yellow { color: var(--accent-yellow) !important; }
+.text-orange { color: var(--accent-orange) !important; }
+.text-mid    { color: var(--text-mid); }
+.text-light-custom { color: var(--text-light); }
+.fs-8        { font-size: 8px; }
+.fs-10       { font-size: 10px; }
+.fs-11       { font-size: 11px; }
+.ls-1        { letter-spacing: 1px; }
+
+/* Ponto amarelo da legenda do gráfico */
+.legend-dot  { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.bg-yellow   { background-color: var(--accent-yellow) !important; }
+
+/* ============================================================
+   BOTÃO ATUALIZAR
+   ============================================================ */
+.btn-atualizar {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--accent-yellow);
+  background: transparent;
+  border: 1px solid var(--accent-yellow);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.btn-atualizar:hover {
+  background: var(--accent-yellow);
+  color: #111;
+}
+
+/* ============================================================
+   BADGE OCIOSO
+   ============================================================ */
+.badge-ocioso {
+  background: #fff3e0;
+  color: var(--accent-orange);
+}
+
+/* ============================================================
+   GRÁFICO
+   ============================================================ */
+.chart-wrapper {
+  /* Mobile: gráfico menor para caber na tela */
+  height: 180px;
+  position: relative;
+}
+
+/* Tablet em diante: gráfico mais alto */
+@media (min-width: 576px) {
+  .chart-wrapper { height: 220px; }
+}
+
+/* ============================================================
+   SETORES
+   ============================================================ */
+.setor-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.setor-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.setor-info {
+  flex: 1;
+  min-width: 0; /* evita overflow em textos longos */
+}
+
+.setor-name {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Barra de progresso dos setores */
+.setor-progress {
+  height: 5px;
+  border-radius: 3px;
+  background: #e9ecef;
+}
+
+.setor-pct {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  width: 34px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   SOBRESCRITAS CRÍTICAS — TOGGLES
+   ============================================================ */
+.sobrescrita-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sobrescrita-nome {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+}
+
+.sobrescrita-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+/* Toggle switch feito apenas com CSS */
+.toggle-wrap   { position: relative; flex-shrink: 0; }
+.toggle-input  { opacity: 0; width: 0; height: 0; position: absolute; }
+
+.toggle-label {
+  display: block;
+  width: 40px;
+  height: 22px;
+  background: #ccc;
+  border-radius: 11px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s;
+}
+
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: left 0.25s;
+}
+
+.toggle-input:checked + .toggle-label              { background: var(--accent-yellow); }
+.toggle-input:checked + .toggle-label::after       { left: 21px; }
+
+/* ============================================================
+   CARD DE IA
+   ============================================================ */
+.ia-card {
+  background: #1a1206;
+  border-color: #3a2c00;
+}
+
+.ia-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.btn-executar {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  background: var(--accent-yellow);
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+.btn-executar:hover { opacity: 0.85; }
+
+.btn-descartar {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  background: transparent;
+  color: #888;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-descartar:hover { border-color: #888; color: #ccc; }
