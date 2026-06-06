@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUL.IA</title>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/img-favicon-jul-ia.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Fontes Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/styles/index.css" />
+  </head>
+
+  <body>
+    <!-- Area Topbar -->
+
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img
+          src="assets/images/img-logo-jul-ia.png"
+          alt="JUL.IA"
+          class="logo-jul-ia"
+        />
+      </div>
+      <div class="topbar-title">Dashboard</div>
+      <div class="topbar-right">
+        <i class="bi bi-bell"></i>
+        <div class="avatar">
+          <img src="assets/images/img-astronauta-user.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <!-- Area Sidebar -->
+      <nav class="sidebar">
+        <div class="nav-icon"><i class="bi bi-list"></i></div>
+        <div class="nav-icon active"><i class="bi bi-grid-1x2"></i></div>
+        <div class="nav-icon"><i class="bi bi-lightning"></i></div>
+        <div class="nav-icon">
+          <img
+            src="assets/images/apple-light.svg"
+            width="18"
+            height="21"
+            alt="maçã"
+          />
+        </div>
+        <div class="nav-icon"><i class="bi bi-droplet"></i></div>
+        <div class="nav-icon"><i class="bi bi-wind"></i></div>
+        <div class="nav-icon"><i class="bi bi-diagram-3"></i></div>
+        <div class="nav-icon"><i class="bi bi-shield"></i></div>
+        <div class="nav-icon"><i class="bi bi-person-circle"></i></div>
+        <div class="nav-icon"><i class="bi bi-cpu"></i></div>
+        <div class="nav-icon"><i class="bi bi-truck"></i></div>
+        <div class="spacer"></div>
+        <div class="nav-icon"><i class="bi bi-question-circle"></i></div>
+        <div class="nav-icon"><i class="bi bi-gear"></i></div>
+      </nav>
+
+      <!-- Area Main -->
+      <main class="content-area">
+        <div class="metrics-row">
+          <!-- 1. Atmosfera Interna -->
+          <div class="dash-card">
+            <div class="card-label">
+              <i class="bi bi-wind"></i> Atmosfera Interna
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="metric-value">Estável</div>
+              <span class="badge-status badge-normal">NORMAL</span>
+            </div>
+            <!-- N2 -->
+            <div class="gas-label">
+              <span>NITROGÊNIO (N2)</span>
+              <span>78%</span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-n2"
+                style="width: 78%"
+              ></div>
+            </div>
+            <!-- O2 -->
+            <div class="gas-label" style="color: var(--accent-green)">
+              <span>OXIGÊNIO (O2)</span>
+              <span>22%</span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-o2"
+                style="width: 22%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- 2. Reutilização de Água -->
+          <div class="dash-card">
+            <div class="card-label">
+              <i class="bi bi-droplet"></i> Reutilização de Água
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="metric-value">120.953<span>L</span></div>
+              <span class="badge-status badge-reserva">EM RESERVA</span>
+            </div>
+            <div class="status-row">
+              <span>EXTRAÇÃO:</span>
+              <span class="badge-andamento">EM ANDAMENTO</span>
+            </div>
+            <div class="status-row" style="margin-bottom: 0">
+              <span>TRATAMENTO:</span>
+              <span class="badge-andamento">EM ANDAMENTO</span>
+            </div>
+          </div>
+
+          <!-- 3. Rede de Energia -->
+          <div class="dash-card">
+            <div class="card-label">
+              <i class="bi bi-lightning"></i> Rede de Energia
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="metric-value">4.2<span>GW</span></div>
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  color: var(--text-mid);
+                  letter-spacing: 1px;
+                "
+                >PRODUÇÃO TOTAL</span
+              >
+            </div>
+            <div class="status-row">
+              <span><span class="dot dot-yellow"></span>Painel Solar</span>
+              <span style="color: var(--accent-yellow)">94%</span>
+            </div>
+            <div class="status-row" style="margin-bottom: 0">
+              <span
+                ><span class="dot dot-blue"></span
+                ><span>Reserva Backup</span></span
+              >
+              <span style="color: var(--accent-blue)">6%</span>
+            </div>
+          </div>
+
+          <!-- 4. Sincronização de Alimentos -->
+          <div class="dash-card">
+            <div class="card-label">
+              <img
+                src="assets/images/apple-black.svg"
+                width="14"
+                height="16"
+                alt="maçã"
+              />
+              Sincronização de Alimentos
+            </div>
+            <!-- Badge Hidroponia -->
+            <div
+              class="d-flex align-items-center gap-2 mb-3 p-2"
+              style="background: #f9fbe7; border-radius: 8px"
+            >
+              <div class="hidro-badge">🌿</div>
+              <div>
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    font-weight: 700;
+                  "
+                >
+                  Hidroponia
+                </div>
+                <div
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 10px;
+                    color: var(--accent-green);
+                  "
+                >
+                  PROJETO DE RENDIMENTO 100%
+                </div>
+              </div>
+            </div>
+            <!-- Area Setores -->
+            <div class="status-row">
+              <span>SETOR 1 (ALGAS)</span>
+              <span class="badge-sincronizado">SINCRONIZADO</span>
+            </div>
+            <div class="status-row">
+              <span>SETOR 2 (SOJA)</span>
+              <span class="badge-sincronizado">SINCRONIZADO</span>
+            </div>
+            <div class="status-row" style="margin-bottom: 0">
+              <span>SETOR 3 (FUNGOS)</span>
+              <span class="badge-colheita">COLHEITA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Area do Setor Alfa -->
+        <div class="bottom-row">
+          <div class="topo-card">
+            <div class="topo-header">
+              <div class="card-label">
+                <i class="bi bi-geo-alt"></i> Topografia do Setor Alfa
+              </div>
+            </div>
+
+            <div class="topo-video">
+              <video
+                class="video"
+                autoplay
+                muted
+                loop
+                playsinline
+                id="meu-video"
+                src="assets/images/video-setor-alfa.mp4"
+              ></video>
+            </div>
+          </div>
+
+          <!-- Coluna direita -->
+          <div class="right-col">
+            <!-- Equipamentos Externos -->
+            <div class="dash-card">
+              <div class="card-label">
+                <i class="bi bi-cpu"></i> Equipamentos Externos
+              </div>
+
+              <div class="equip-img">
+                <img
+                  src="assets/images/img-equip-ext-lrv.png"
+                  alt="Imagem dos (LRV) Lunar Roving Vehicle na lua"
+                />
+              </div>
+              <div class="equip-item">
+                <span>DRONE V7-999</span>
+                <span class="equip-status-blue">EM RECONHECIMENTO</span>
+              </div>
+              <div class="equip-item">
+                <span>LRV 2B-192</span>
+                <span class="equip-status-orange">10% — CARREGANDO</span>
+              </div>
+              <div class="equip-item">
+                <span>LRV 0X-001</span>
+                <span class="equip-status-green">100% — DISPONÍVEL</span>
+              </div>
+            </div>
+
+            <!-- Saúde da Tripulação -->
+            <div class="dash-card">
+              <div class="card-label">
+                <i class="bi bi-heart-pulse"></i> Saúde da Tripulação
+              </div>
+              <div class="health-alert">
+                <div class="alert-dot"></div>
+                <span
+                  >ALERTA: ASTRONAUTA
+                  <strong>F. GALLO</strong> INDISPONÍVEL</span
+                >
+              </div>
+              <div class="health-body-row">
+                <div class="body-placeholder">
+                  <img
+                    class="img-corpo-trip"
+                    src="assets/images/img-corpo-trip.png"
+                    alt="Silhueta corporal com destaque no ombro"
+                  />
+                </div>
+                <!-- Diagnóstico -->
+                <div class="health-diag">
+                  <div class="diag-line">
+                    <span>DIAGNÓSTICO:</span>
+                    <span class="diag-val">INFLAMAÇÃO MUSCULAR</span>
+                  </div>
+                  <div class="diag-line">
+                    <span>TRATAMENTO:</span>
+                    <span class="diag-val">INICIADO</span>
+                  </div>
+                  <div class="diag-line">
+                    <span>AFASTAMENTO:</span>
+                    <span class="diag-val">15 DIAS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /right-col -->
+        </div>
+        <!-- /bottom-row -->
+      </main>
+      <!-- /content-area -->
+    </div>
+    <!-- /main-wrapper -->
+
+    <!-- Area Footer -->
+    <div class="statusbar">
+      <div class="statusbar-item">
+        SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
+      </div>
+      <div class="statusbar-item" style="margin-left: auto">
+        REDE: <span class="val-white">ESTÁVEL</span>
+      </div>
+      <div class="statusbar-item">SAT: <span class="val-blue">14MS</span></div>
+      <div class="statusbar-item">
+        LOCAL: <span class="val-white">SINCRONIZADO</span>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Máscara de telefone -->
+    <script src="https://unpkg.com/imask"></script>
+    <script src="assets/js/tel.mask.js"></script>
+
+    <script>
+      const video = document.getElementById("meu-video");
+      let shouldResumeWhenVisible = false;
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          shouldResumeWhenVisible = !video.paused && !video.ended;
+          video.pause();
+          return;
+        }
+
+        if (shouldResumeWhenVisible) {
+          video.play();
+        }
+
+        shouldResumeWhenVisible = false;
+      });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
