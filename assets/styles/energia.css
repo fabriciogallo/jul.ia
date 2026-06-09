@@ -99,7 +99,7 @@
 
 .setor-name {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   color: var(--text-dark);
   margin-bottom: 4px;
   white-space: nowrap;
@@ -110,12 +110,12 @@
 .setor-progress {
   height: 5px;
   border-radius: 3px;
-  background: #e9ecef;
+  background: #bebebe;
 }
 
 .setor-pct {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   width: 34px;
   text-align: right;
