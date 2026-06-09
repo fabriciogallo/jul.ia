@@ -125,12 +125,6 @@
 
       <!-- CONTEÚDO PRINCIPAL -->
       <main class="content-area">
-        <!--
-          LINHA 1 — CARDS DE MÉTRICAS
-          col-12      → mobile:  cada card ocupa a linha inteira
-          col-sm-6    → tablet:  2 cards por linha
-          col-lg-4    → desktop: 3 cards por linha
-        -->
         <div class="row g-3 mb-3">
           <!-- Card: Uso Atual -->
           <div class="col-12 col-sm-6 col-lg-4">
@@ -145,8 +139,8 @@
                 <span class="badge-status badge-normal">NORMAL</span>
               </div>
               <div class="status-row mb-0">
-                <span style="color: var(--accent-yellow)">CONSUMO</span>
-                <span class="font-mono text-yellow fs-11"
+                <span class="text-yellow font-mono">CONSUMO</span>
+                <span class="text-yellow font-mono fs-11"
                   >75KWH (MEDIA DIÁRIA)</span
                 >
               </div>
@@ -165,13 +159,11 @@
                 <div class="metric-value" id="val-eficiencia">
                   100<span>%</span>
                 </div>
-                <button class="btn-atualizar" onclick="animarEficiencia()">
-                  ATUALIZAR
-                </button>
+                <button class="btn-atualizar">ATUALIZAR</button>
               </div>
               <div class="status-row mb-0">
                 <span>ALINHAMENTO:</span>
-                <span class="font-mono text-yellow fs-11">AUTOMATIZADO</span>
+                <span class="text-yellow font-mono fs-11">AUTOMATIZADO</span>
               </div>
             </div>
           </div>
@@ -192,159 +184,120 @@
               </div>
               <div class="status-row mb-0">
                 <span><span class="dot dot-yellow"></span>Painel Solar</span>
-                <span style="color: var(--accent-yellow)">100%</span>
+                <span class="text-yellow">100%</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!--
-          LINHA 2 — GRÁFICO + DISTRIBUIÇÃO + CONTROLES
-          col-12      → mobile:  tudo em coluna única
-          col-lg-8    → desktop: coluna esquerda (gráfico + setores) ocupa 8/12
-          col-lg-4    → desktop: coluna direita (sobrescritas + IA) ocupa 4/12
-        -->
-        <div class="row g-3">
-          <!-- COLUNA ESQUERDA -->
-          <div class="col-12 col-lg-8 d-flex flex-column gap-3">
-            <!-- Gráfico Consumo X Produção -->
+        <!-- <!LINHA 2 — GRÁFICO -->
+        <div class="row g-3 mb-3">
+          <div class="col-12">
             <div class="dash-card">
-              <div
-                class="d-flex flex-column flex-sm-row justify-content-between align-items-start gap-2 mb-3"
-              >
-                <div>
-                  <div class="font-mono fw-bold fs-6 text-dark mb-1">
-                    Consumo X Produção
-                  </div>
-                  <div class="font-mono text-light-custom fs-10 ls-1">
-                    24hrs — Ciclo Lunar
-                  </div>
-                </div>
-                <div
-                  class="d-flex gap-3 align-items-center font-mono fs-10 ls-1 text-mid"
-                >
-                  <span class="d-flex align-items-center gap-1">
-                    <span class="legend-dot bg-dark"></span> PRODUCTION
-                  </span>
-                  <span class="d-flex align-items-center gap-1 text-yellow">
-                    <span class="legend-dot bg-yellow"></span> CONSUMPTION
-                  </span>
-                </div>
-              </div>
-              <div class="chart-wrapper">
-                <canvas id="energyChart"></canvas>
-              </div>
+              <img
+                src="../assets/images/img-dados-producao-x-consumo.jpg"
+                alt="Gráfico Consumo X Produção — 24hrs Ciclo Lunar"
+                class="img-grafico"
+              />
             </div>
+          </div>
+        </div>
 
-            <!-- Distribuição por Setor -->
-            <div class="dash-card">
+        <!-- LINHA 3 — DISTRIBUIÇÃO POR SETOR -->
+        <div class="row g-3">
+          <!-- Distribuição por Setor -->
+          <div class="col-12 col-lg-8">
+            <div class="dash-card h-100">
               <div class="card-label mb-3">Distribuição por Setor</div>
 
-              <!--
-                Dentro do card, cada setor também usa row/col
-                col-12      → mobile:  cada setor em linha inteira
-                col-sm-6    → tablet+: 2 setores por linha
-              -->
-              <div class="row g-2">
-                <div class="col-12 col-sm-6">
-                  <div class="setor-item">
-                    <div class="setor-icon">
-                      <i class="bi bi-house text-white"></i>
-                    </div>
-                    <div class="setor-info">
-                      <div class="setor-name">Ambientação</div>
-                      <div class="progress setor-progress">
-                        <div
-                          class="progress-bar bg-yellow"
-                          style="width: 28%"
-                        ></div>
-                      </div>
-                    </div>
-                    <span class="setor-pct text-yellow">28%</span>
-                    <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              <div class="setor-item">
+                <div class="setor-icon">
+                  <i class="bi bi-house text-white"></i>
+                </div>
+                <div class="setor-info">
+                  <div class="setor-name">Ambientação</div>
+                  <div class="progress setor-progress">
+                    <div
+                      class="progress-bar bg-yellow"
+                      style="width: 28%"
+                    ></div>
                   </div>
                 </div>
+                <span class="setor-pct text-yellow">28%</span>
+                <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              </div>
 
-                <div class="col-12 col-sm-6">
-                  <div class="setor-item">
-                    <div class="setor-icon">
-                      <i class="bi bi-droplet text-white"></i>
-                    </div>
-                    <div class="setor-info">
-                      <div class="setor-name">Hidropônicos</div>
-                      <div class="progress setor-progress">
-                        <div
-                          class="progress-bar bg-yellow"
-                          style="width: 30%"
-                        ></div>
-                      </div>
-                    </div>
-                    <span class="setor-pct text-yellow">30%</span>
-                    <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              <div class="setor-item">
+                <div class="setor-icon">
+                  <i class="bi bi-droplet text-white"></i>
+                </div>
+                <div class="setor-info">
+                  <div class="setor-name">Hidropônicos</div>
+                  <div class="progress setor-progress">
+                    <div
+                      class="progress-bar bg-yellow"
+                      style="width: 30%"
+                    ></div>
                   </div>
                 </div>
+                <span class="setor-pct text-yellow">30%</span>
+                <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              </div>
 
-                <div class="col-12 col-sm-6">
-                  <div class="setor-item">
-                    <div class="setor-icon">
-                      <i class="bi bi-gem text-white"></i>
-                    </div>
-                    <div class="setor-info">
-                      <div class="setor-name">Mineração</div>
-                      <div class="progress setor-progress">
-                        <div
-                          class="progress-bar bg-yellow"
-                          style="width: 15%"
-                        ></div>
-                      </div>
-                    </div>
-                    <span class="setor-pct text-yellow">15%</span>
-                    <span class="badge-status badge-ocioso fs-8">OCIOSO</span>
+              <div class="setor-item">
+                <div class="setor-icon">
+                  <i class="bi bi-gem text-white"></i>
+                </div>
+                <div class="setor-info">
+                  <div class="setor-name">Mineração</div>
+                  <div class="progress setor-progress">
+                    <div
+                      class="progress-bar bg-yellow"
+                      style="width: 15%"
+                    ></div>
                   </div>
                 </div>
+                <span class="setor-pct text-yellow">15%</span>
+                <span class="badge-status badge-ocioso fs-8">OCIOSO</span>
+              </div>
 
-                <div class="col-12 col-sm-6">
-                  <div class="setor-item">
-                    <div class="setor-icon">
-                      <i class="bi bi-cpu text-white"></i>
-                    </div>
-                    <div class="setor-info">
-                      <div class="setor-name">Hardware Técnicos</div>
-                      <div class="progress setor-progress">
-                        <div
-                          class="progress-bar bg-yellow"
-                          style="width: 10%"
-                        ></div>
-                      </div>
-                    </div>
-                    <span class="setor-pct text-yellow">10%</span>
-                    <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              <div class="setor-item">
+                <div class="setor-icon">
+                  <i class="bi bi-cpu text-white"></i>
+                </div>
+                <div class="setor-info">
+                  <div class="setor-name">Hardware Técnicos</div>
+                  <div class="progress setor-progress">
+                    <div
+                      class="progress-bar bg-yellow"
+                      style="width: 10%"
+                    ></div>
                   </div>
                 </div>
+                <span class="setor-pct text-yellow">10%</span>
+                <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              </div>
 
-                <div class="col-12">
-                  <div class="setor-item mb-0">
-                    <div class="setor-icon">
-                      <i class="bi bi-house-door text-white"></i>
-                    </div>
-                    <div class="setor-info">
-                      <div class="setor-name">Tratamento da água de degelo</div>
-                      <div class="progress setor-progress">
-                        <div
-                          class="progress-bar bg-yellow"
-                          style="width: 25%"
-                        ></div>
-                      </div>
-                    </div>
-                    <span class="setor-pct text-yellow">25%</span>
-                    <span class="badge-status badge-normal fs-8">NOMINAL</span>
+              <div class="setor-item mb-0">
+                <div class="setor-icon">
+                  <i class="bi bi-house-door text-white"></i>
+                </div>
+                <div class="setor-info">
+                  <div class="setor-name">Tratamento da água de degelo</div>
+                  <div class="progress setor-progress">
+                    <div
+                      class="progress-bar bg-yellow"
+                      style="width: 25%"
+                    ></div>
                   </div>
                 </div>
+                <span class="setor-pct text-yellow">25%</span>
+                <span class="badge-status badge-normal fs-8">NOMINAL</span>
               </div>
             </div>
           </div>
 
-          <!-- COLUNA DIREITA -->
+          <!-- Coluna direita: Sobrescritas + IA -->
           <div class="col-12 col-lg-4 d-flex flex-column gap-3">
             <!-- Sobrescritas Críticas -->
             <div class="dash-card">
@@ -416,91 +369,6 @@
         LOCAL: <span class="val-white">SINCRONIZADO</span>
       </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script>
-      const labels = [
-        "00:00",
-        "02:00",
-        "04:00",
-        "06:00",
-        "08:00",
-        "10:00",
-        "12:00",
-        "14:00",
-        "16:00",
-        "18:00",
-        "20:00",
-        "22:00",
-        "24:00",
-      ];
-      const production = [
-        70, 65, 75, 100, 145, 140, 155, 135, 155, 130, 105, 100, 75,
-      ];
-      const consumption = [50, 46, 44, 48, 70, 88, 90, 88, 85, 82, 52, 50, 46];
-
-      new Chart(document.getElementById("energyChart").getContext("2d"), {
-        type: "bar",
-        data: {
-          labels,
-          datasets: [
-            {
-              label: "PRODUCTION",
-              data: production,
-              backgroundColor: "#111111",
-              borderRadius: 3,
-              order: 2,
-            },
-            {
-              label: "CONSUMPTION",
-              data: consumption,
-              type: "line",
-              borderColor: "#ffd600",
-              backgroundColor: "transparent",
-              borderWidth: 2.5,
-              pointRadius: 0,
-              tension: 0.4,
-              order: 1,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: {
-            x: {
-              grid: { color: "#e8e8e4" },
-              ticks: {
-                font: { family: "Space Mono, monospace", size: 10 },
-                color: "#aaa",
-              },
-            },
-            y: {
-              min: 0,
-              max: 170,
-              grid: { color: "#e8e8e4" },
-              ticks: {
-                font: { family: "Space Mono, monospace", size: 10 },
-                color: "#aaa",
-                stepSize: 50,
-              },
-            },
-          },
-        },
-      });
-
-      function animarEficiencia() {
-        const el = document.getElementById("val-eficiencia");
-        let val = 95;
-        el.innerHTML = val + "<span>%</span>";
-        const timer = setInterval(() => {
-          val++;
-          el.innerHTML = val + "<span>%</span>";
-          if (val >= 100) clearInterval(timer);
-        }, 60);
-      }
-    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
