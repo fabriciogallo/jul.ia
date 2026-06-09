@@ -1,0 +1,278 @@
+/* ============================================================
+   ESTUFA.CSS — Mobile First
+   Breakpoints: sm → 576px | lg → 992px
+   ============================================================ */
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+.text-green {
+  color: var(--accent-green) !important;
+}
+.text-blue {
+  color: var(--accent-blue) !important;
+}
+.text-red {
+  color: var(--accent-red) !important;
+}
+.text-mid {
+  color: var(--text-mid);
+}
+.fs-10 {
+  font-size: 10px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.ls-1 {
+  letter-spacing: 1px;
+}
+
+.bg-blue {
+  background-color: var(--accent-blue) !important;
+}
+.bg-green {
+  background-color: var(--accent-green) !important;
+}
+
+/* ── Cards de Setor ── */
+.setor-card {
+  overflow: hidden;
+}
+
+.setor-foto-wrap {
+  position: relative;
+  width: 100%;
+  /* Mobile: foto menor */
+  height: 160px;
+}
+
+@media (min-width: 992px) {
+  .setor-foto-wrap {
+    height: 220px;
+  }
+}
+
+.setor-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Escurece a imagem do setor e adiciona transição suave */
+.setor-foto {
+  filter: brightness(0.65);
+  transition: filter 200ms ease;
+}
+
+/* Classe utilitária: deixa a imagem mais escura quando necessário */
+.setor-foto.escuro {
+  filter: brightness(0.5);
+}
+/* Badge colorido no canto da foto (ALFACE, TOMATE, CENOURA) */
+.setor-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge-azul {
+  background: rgba(33, 150, 243, 0.25);
+  color: #90caf9;
+  border: 1px solid #90caf9;
+}
+.badge-verde {
+  background: rgba(0, 200, 83, 0.2);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+}
+.badge-vermelho {
+  background: rgba(244, 67, 54, 0.2);
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red);
+}
+
+.dot-badge {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.dot-azul {
+  background: #90caf9;
+}
+.dot-verde {
+  background: var(--accent-green);
+}
+.dot-vermelho {
+  background: var(--accent-red);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+/* Corpo de texto do setor (abaixo da foto) */
+.setor-info-body {
+  padding: 12px 14px;
+}
+
+.setor-titulo {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.setor-status-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ── Telemetria ── */
+.tele-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-mid);
+  margin-bottom: 2px;
+}
+
+.tele-valor {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.nutriente-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-mid);
+  margin-bottom: 4px;
+}
+
+.nutriente-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: #e9ecef;
+}
+
+/* ── Tabela Resumo Geral ── */
+.resumo-table {
+  border-collapse: collapse;
+}
+
+.resumo-table thead tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.resumo-table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-mid);
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.resumo-table td {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dark);
+  padding: 14px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.resumo-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Irrigação ── */
+.irrig-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.irrig-select {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dark);
+  background: #e6f3ff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* Toggle (reutilizado da energia, com variação azul) */
+.toggle-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-label {
+  display: block;
+  width: 40px;
+  height: 22px;
+  background: #ccc;
+  border-radius: 11px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s;
+}
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: left 0.25s;
+}
+
+.toggle-input:checked + .toggle-label.toggle-blue {
+  background: var(--accent-blue);
+}
+.toggle-input:checked + .toggle-label::after {
+  left: 21px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.4);
+  }
+}

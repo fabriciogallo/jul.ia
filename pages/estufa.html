@@ -1,16 +1,406 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Estufa</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUL.IA | Estufa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/img-favicon-jul-ia.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="../assets/styles/index.css" />
+    <link rel="stylesheet" href="../assets/styles/estufa.css" />
   </head>
+
   <body>
-    <main style="padding: 20px">
-      <h1>Estufa</h1>
-      <p>Página placeholder relacionada ao item Estufa.</p>
-      <p><a href="../index.html">Voltar ao Dashboard</a></p>
-    </main>
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img
+          src="../assets/images/img-logo-jul-ia.png"
+          alt="JUL.IA"
+          class="logo-jul-ia"
+        />
+      </div>
+      <div class="topbar-title">Estufa</div>
+      <div class="topbar-right">
+        <i class="bi bi-bell"></i>
+        <div class="avatar">
+          <img src="../assets/images/img-astronauta-user.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <nav class="sidebar">
+        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu"
+          ><i class="bi bi-list"></i
+        ></a>
+        <a class="nav-icon" href="../index.html" aria-label="Dashboard"
+          ><i class="bi bi-grid-1x2"></i
+        ></a>
+        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia"
+          ><i class="bi bi-lightning"></i
+        ></a>
+        <a
+          class="nav-icon active"
+          href="../pages/estufa.html"
+          aria-label="Estufa"
+        >
+          <img
+            src="../assets/images/apple-light.svg"
+            width="18"
+            height="20"
+            alt="maçã"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/agua.html" aria-label="Água"
+          ><i class="bi bi-droplet"></i
+        ></a>
+        <a class="nav-icon" href="../pages/clima.html" aria-label="Clima"
+          ><i class="bi bi-wind"></i
+        ></a>
+        <a class="nav-icon" href="../pages/diagram.html" aria-label="Diagram"
+          ><i class="bi bi-diagram-3"></i
+        ></a>
+        <a
+          class="nav-icon"
+          href="../pages/seguranca.html"
+          aria-label="Segurança"
+          ><i class="bi bi-shield"></i
+        ></a>
+        <a class="nav-icon" href="../pages/perfil.html" aria-label="Perfil"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+        <a class="nav-icon" href="../pages/cpu.html" aria-label="CPU"
+          ><i class="bi bi-cpu"></i
+        ></a>
+        <a
+          class="nav-icon"
+          href="../pages/transporte.html"
+          aria-label="Transporte"
+          ><i class="bi bi-truck"></i
+        ></a>
+        <div class="spacer"></div>
+        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda"
+          ><i class="bi bi-question-circle"></i
+        ></a>
+        <a
+          class="nav-icon"
+          href="../pages/config.html"
+          aria-label="Configurações"
+          ><i class="bi bi-gear"></i
+        ></a>
+      </nav>
+
+      <main class="content-area">
+        <!-- LINHA 1: Setores (foto + status) + Telemetria -->
+        <div class="row g-3 mb-3">
+          <!-- Setor 1 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card setor-card h-100 p-0">
+              <div class="setor-foto-wrap">
+                <img
+                  src="../assets/images/img-estufa-alface.png"
+                  alt="Alface — Setor 1"
+                  class="setor-foto"
+                />
+                <span class="setor-badge badge-azul"
+                  ><span class="dot-badge dot-azul"></span> ALFACE</span
+                >
+              </div>
+              <div class="setor-info-body">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <div class="setor-titulo">Setor 1:</div>
+                  <span class="setor-status-label text-green fs-12"
+                    >NORMAL</span
+                  >
+                </div>
+                <div class="status-row mb-0">
+                  <span class="font-mono fs-12 text-blue py-2">STATUS:</span>
+                  <span class="font-mono fs-12 text-blue">EM IRRIGAÇÃO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Setor 2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card setor-card h-100 p-0">
+              <div class="setor-foto-wrap">
+                <img
+                  src="../assets/images/img-estufa-tomate.png"
+                  alt="Tomate — Setor 2"
+                  class="setor-foto"
+                />
+                <span class="setor-badge badge-verde"
+                  ><span class="dot-badge dot-verde"></span> TOMATE</span
+                >
+              </div>
+              <div class="setor-info-body">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <div class="setor-titulo">Setor 2:</div>
+                  <span class="setor-status-label text-green fs-12"
+                    >NORMAL</span
+                  >
+                </div>
+                <div class="status-row mb-0">
+                  <span class="font-mono fs-12 text-green py-2">STATUS:</span>
+                  <span class="font-mono fs-12 text-green"
+                    >PRONTO PARA COLHEITA</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Setor 3 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card setor-card h-100 p-0">
+              <div class="setor-foto-wrap">
+                <img
+                  src="../assets/images/img-estufa-cenoura.png"
+                  alt="Cenoura — Setor 3"
+                  class="setor-foto"
+                />
+                <span class="setor-badge badge-vermelho"
+                  ><span class="dot-badge dot-vermelho"></span> CENOURA</span
+                >
+              </div>
+              <div class="setor-info-body">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-1"
+                >
+                  <div class="setor-titulo">Setor 3:</div>
+                  <span class="setor-status-label text-red fs-12">ALERTA</span>
+                </div>
+                <div class="status-row mb-0">
+                  <span class="font-mono fs-12 text-red py-2">STATUS:</span>
+                  <span class="font-mono fs-12 text-red"
+                    >REPAROS NECESSÁRIOS</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Telemetria -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-3">
+                <i class="bi bi-power"></i> Telemetria
+              </div>
+
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <div class="tele-label">ph Solo</div>
+                  <div class="tele-valor text-dark">6.3</div>
+                  <div class="font-mono fs-10 text-mid ls-1">ESTÁVEL</div>
+                </div>
+                <div class="col-6 text-end">
+                  <div class="tele-label">ADUBAÇÃO</div>
+                  <div class="tele-valor text-red">50%</div>
+                  <div class="font-mono fs-10 text-red ls-1">ALERTA</div>
+                </div>
+              </div>
+
+              <div class="card-label mb-2" style="font-size: 12px">
+                <i class="bi bi-leaf"></i> Nutrientes
+              </div>
+
+              <div class="nutriente-label">Nitrogenio (N)</div>
+              <div class="progress nutriente-bar mb-2">
+                <div class="progress-bar bg-blue" style="width: 55%"></div>
+              </div>
+
+              <div class="nutriente-label">Fósforo (P)</div>
+              <div class="progress nutriente-bar mb-2">
+                <div class="progress-bar bg-blue" style="width: 70%"></div>
+              </div>
+
+              <div class="nutriente-label">Potássio (K)</div>
+              <div class="progress nutriente-bar">
+                <div class="progress-bar bg-green" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINHA 2: Resumo Geral + Irrigação -->
+        <div class="row g-3">
+          <!-- Tabela Resumo Geral -->
+          <div class="col-12 col-lg-9">
+            <div class="dash-card h-100">
+              <div class="card-label mb-3">
+                <i class="bi bi-leaf"></i> Resumo Geral:
+              </div>
+
+              <div class="table-responsive">
+                <table class="resumo-table w-100">
+                  <thead>
+                    <tr>
+                      <th>ESPÉCIE</th>
+                      <th>SETOR</th>
+                      <th>SAÚDE</th>
+                      <th>ESTÁGIO</th>
+                      <th>RENDIMENTO</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ALFACE</td>
+                      <td>STR-01</td>
+                      <td class="text-green">NORMAL</td>
+                      <td>PRONTO</td>
+                      <td>1KG/S</td>
+                    </tr>
+                    <tr>
+                      <td>TOMATE</td>
+                      <td>STR-02</td>
+                      <td class="text-green">NORMAL</td>
+                      <td>PRONTO</td>
+                      <td>500G/S</td>
+                    </tr>
+                    <tr>
+                      <td>CENOURA</td>
+                      <td>STR-03</td>
+                      <td class="text-green">NORMAL</td>
+                      <td>80% (5D RESTANTES)</td>
+                      <td>2KG/S</td>
+                    </tr>
+                    <tr>
+                      <td>BATATA</td>
+                      <td>STR-04</td>
+                      <td class="text-red">ALERTA</td>
+                      <td>PRONTO</td>
+                      <td>3KG/S</td>
+                    </tr>
+                    <tr>
+                      <td>MANDIOCA</td>
+                      <td>STR-05</td>
+                      <td class="text-green">NORMAL</td>
+                      <td>80% (2D RESTANTES)</td>
+                      <td>1KG/S</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Irrigação -->
+          <div class="col-12 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-3">
+                <i class="bi bi-droplet-fill"></i> Irrigação
+              </div>
+
+              <!-- Toggle Irrigação Automática -->
+              <div class="irrig-toggle-row mb-3">
+                <div>
+                  <div
+                    class="font-mono fw-bold"
+                    style="font-size: 11px; letter-spacing: 1px"
+                  >
+                    IRRIGAÇÃO AUTOMÁTICA
+                  </div>
+                  <div class="font-mono fs-10 text-green ls-1">ATIVO</div>
+                </div>
+                <div class="toggle-wrap">
+                  <input
+                    type="checkbox"
+                    id="toggle-irrig"
+                    class="toggle-input"
+                    checked
+                  />
+                  <label
+                    for="toggle-irrig"
+                    class="toggle-label toggle-blue"
+                  ></label>
+                </div>
+              </div>
+
+              <div class="font-mono fs-10 text-mid ls-1 mb-2">
+                CONTROLE MANUAL
+              </div>
+
+              <!-- Selects de controle manual -->
+              <select class="irrig-select mb-2">
+                <option>Regar STR-01 (ALFACE)</option>
+                <option>Regar STR-02 (TOMATE)</option>
+                <option>Regar STR-03 (CENOURA)</option>
+                <option>Regar STR-04 (BATATA)</option>
+                <option>Regar STR-05 (MANDIOCA)</option>
+              </select>
+
+              <select class="irrig-select mb-3">
+                <option>Regar STR-02 (TOMATE)</option>
+                <option>Regar STR-01 (ALFACE)</option>
+                <option>Regar STR-03 (CENOURA)</option>
+              </select>
+
+              <!-- Reservatório -->
+              <div
+                class="d-flex justify-content-between font-mono fs-10 text-mid ls-1 mb-1"
+              >
+                <span>RESERVATÓRIO TOTAL</span>
+                <span>82%</span>
+              </div>
+              <div class="progress nutriente-bar">
+                <div class="progress-bar bg-blue" style="width: 82%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="statusbar">
+      <div class="statusbar-item">
+        SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
+      </div>
+      <div class="statusbar-item ms-auto">
+        REDE: <span class="val-white">ESTÁVEL</span>
+      </div>
+      <div class="statusbar-item">SAT: <span class="val-blue">14MS</span></div>
+      <div class="statusbar-item">
+        LOCAL: <span class="val-white">SINCRONIZADO</span>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
