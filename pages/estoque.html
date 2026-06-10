@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JUL.IA | Estoque</title>
 
+    <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Exo+2:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,23 +17,32 @@
       href="../assets/images/img-favicon-jul-ia.png"
       type="image/x-icon"
     />
+    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <!-- Fontes Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="../assets/styles/index.css" />
     <link rel="stylesheet" href="../assets/styles/estoque.css" />
   </head>
 
   <body>
     <!-- TOPBAR -->
-    <div class="topbar">
+    <header class="topbar">
       <div class="topbar-logo">
         <img
           src="../assets/images/img-logo-jul-ia.png"
@@ -47,19 +57,19 @@
           <img src="../assets/images/img-astronauta-user.png" alt="Avatar" />
         </div>
       </div>
-    </div>
+    </header>
 
     <div class="main-wrapper">
-      <!-- SIDEBAR (igual ao index) -->
-      <nav class="sidebar">
-        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu">
-          <i class="bi bi-list"></i
+      <!-- SIDEBAR (desktop) / BOTTOM NAV (mobile) -->
+      <nav class="sidebar" aria-label="Navegação principal">
+        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu"
+          ><i class="bi bi-list"></i
         ></a>
-        <a class="nav-icon" href="../index.html" aria-label="Dashboard">
-          <i class="bi bi-grid-1x2"></i
+        <a class="nav-icon" href="../index.html" aria-label="Dashboard"
+          ><i class="bi bi-grid-1x2"></i
         ></a>
-        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia">
-          <i class="bi bi-lightning"></i
+        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia"
+          ><i class="bi bi-lightning"></i
         ></a>
         <a class="nav-icon" href="../pages/estufa.html" aria-label="Estufa">
           <img
@@ -69,27 +79,26 @@
             alt="Maçã"
           />
         </a>
-        <a class="nav-icon" href="../pages/agua.html" aria-label="Água">
-          <i class="bi bi-droplet"></i
+        <a class="nav-icon" href="../pages/agua.html" aria-label="Água"
+          ><i class="bi bi-droplet"></i
         ></a>
-        <a class="nav-icon" href="../pages/ar.html" aria-label="Ar">
-          <i class="bi bi-wind"></i
+        <a class="nav-icon" href="../pages/ar.html" aria-label="Ar"
+          ><i class="bi bi-wind"></i
         ></a>
         <a
           class="nav-icon active"
           href="../pages/estoque.html"
           aria-label="Estoque"
-        >
-          <i class="bi bi-boxes"></i
+          ><i class="bi bi-boxes"></i
         ></a>
         <a class="nav-icon" href="../pages/colonia.html" aria-label="Colônia">
           <img src="../assets/images/icon-domo.png" height="14" alt="Domo" />
         </a>
-        <a class="nav-icon" href="../pages/perfil.html" aria-label="Perfil">
-          <i class="bi bi-person-circle"></i
+        <a class="nav-icon" href="../pages/perfil.html" aria-label="Perfil"
+          ><i class="bi bi-person-circle"></i
         ></a>
-        <a class="nav-icon" href="../pages/cpu.html" aria-label="CPU">
-          <i class="bi bi-cpu"></i
+        <a class="nav-icon" href="../pages/cpu.html" aria-label="CPU"
+          ><i class="bi bi-cpu"></i
         ></a>
         <a
           class="nav-icon"
@@ -98,25 +107,24 @@
           ><i class="bi bi-truck"></i
         ></a>
         <div class="spacer"></div>
-        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda">
-          <i class="bi bi-question-circle"></i
+        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda"
+          ><i class="bi bi-question-circle"></i
         ></a>
-        <a class="nav-icon" href="../pages/config.html" aria-label="Config">
-          <i class="bi bi-gear"></i
+        <a class="nav-icon" href="../pages/config.html" aria-label="Config"
+          ><i class="bi bi-gear"></i
         ></a>
       </nav>
 
-      <!-- CONTEÚDO -->
+      <!-- CONTEÚDO PRINCIPAL -->
       <main class="content-area">
-        <!-- ══ LINHA 1: 4 CARDS COM ANEL ══ -->
-        <div class="metrics-row">
+        <!-- ══ MÉTRICAS: 4 CARDS ══ -->
+        <section class="metrics-row" aria-label="Métricas de reserva">
           <!-- 1. Reserva de O² -->
           <div class="metric-card ring-blue">
             <div class="metric-card-top">
               <div class="metric-card-label">Reserva de O²</div>
-              <!-- Anel SVG: circunferência = 2π×27 ≈ 169.6 -->
               <div class="ring-wrap">
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
                   <circle class="ring-bg" cx="32" cy="32" r="27" />
                   <circle
                     class="ring-fill"
@@ -126,7 +134,6 @@
                     stroke-dasharray="169.6"
                     stroke-dashoffset="6.8"
                   />
-                  <!-- 96% → offset = 169.6*(1-0.96) -->
                 </svg>
                 <div class="ring-icon">
                   <i class="bi bi-wind" style="color: var(--accent-blue)"></i>
@@ -145,7 +152,7 @@
             <div class="metric-card-top">
               <div class="metric-card-label">Reserva de H²O</div>
               <div class="ring-wrap">
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
                   <circle class="ring-bg" cx="32" cy="32" r="27" />
                   <circle
                     class="ring-fill"
@@ -155,7 +162,6 @@
                     stroke-dasharray="169.6"
                     stroke-dashoffset="22.0"
                   />
-                  <!-- 87% → 169.6*0.13 -->
                 </svg>
                 <div class="ring-icon">
                   <i
@@ -177,7 +183,7 @@
             <div class="metric-card-top">
               <div class="metric-card-label">Pacotes de Nutrientes</div>
               <div class="ring-wrap">
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
                   <circle class="ring-bg" cx="32" cy="32" r="27" />
                   <circle
                     class="ring-fill"
@@ -187,15 +193,13 @@
                     stroke-dasharray="169.6"
                     stroke-dashoffset="30.5"
                   />
-                  <!-- 82% → 169.6*0.18 -->
                 </svg>
                 <div class="ring-icon">
-                  <!-- ícone maçã inline (mesmo SVG do arquivo do usuário, menor) -->
                   <img
                     src="../assets/images/apple-active.svg"
                     width="20"
                     height="20"
-                    alt="maçã"
+                    alt="Nutrientes"
                   />
                 </div>
               </div>
@@ -212,7 +216,7 @@
             <div class="metric-card-top">
               <div class="metric-card-label">Rendimento de Baterias</div>
               <div class="ring-wrap">
-                <svg viewBox="0 0 64 64">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
                   <circle class="ring-bg" cx="32" cy="32" r="27" />
                   <circle
                     class="ring-fill"
@@ -222,7 +226,6 @@
                     stroke-dasharray="169.6"
                     stroke-dashoffset="1.7"
                   />
-                  <!-- 99% → 169.6*0.01 -->
                 </svg>
                 <div class="ring-icon">
                   <i
@@ -238,19 +241,205 @@
               <div class="metric-bar-fill" style="width: 99%"></div>
             </div>
           </div>
-        </div>
-        <!-- /metrics-row -->
+        </section>
 
-        <!-- ══ LINHA 2: Tabela + Carga ══ -->
+        <!-- ══ LINHA INFERIOR: Tabela + Carga ══ -->
         <div class="bottom-row">
           <!-- TABELA DE INVENTÁRIO -->
-          <div class="table-card">
+          <section class="table-card" aria-label="Histórico de Inventário">
             <div class="table-header">
-              <div class="card-label" style="margin-bottom: 0">
+              <div class="card-label">
                 <i class="bi bi-table"></i> Histórico Inventário
               </div>
             </div>
-            <div class="table-scroll">
+
+            <!-- Mobile: lista de cards por item -->
+            <div class="inv-mobile-list d-md-none">
+              <!-- item template repetido -->
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-01</span>
+                  <span class="inv-name">Cenoura</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 10 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-15</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-02</span>
+                  <span class="inv-name">Batata</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 5 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-14</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-03</span>
+                  <span class="inv-name">Arroz</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 9 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-13</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-04</span>
+                  <span class="inv-name">Feijão</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 7 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-12</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-05</span>
+                  <span class="inv-name">Alface</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 3 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-11</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-06</span>
+                  <span class="inv-name">Proteína</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 2 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-10</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-07</span>
+                  <span class="inv-name">Vagem</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 6 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-09</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-08</span>
+                  <span class="inv-name">Beterraba</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 7 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-08</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-09</span>
+                  <span class="inv-name">Beringela</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 12 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-07</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-10</span>
+                  <span class="inv-name">Couve</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 6 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-06</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-11</span>
+                  <span class="inv-name">Brócolis</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 10 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-05</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-12</span>
+                  <span class="inv-name">Ervilha</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 8 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-04</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-13</span>
+                  <span class="inv-name">Espinafre</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 4 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-03</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-14</span>
+                  <span class="inv-name">Abobrinha</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 9 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-02</span>
+                </div>
+              </div>
+              <div class="inv-item">
+                <div class="inv-item-top">
+                  <span class="inv-sku">ID-15</span>
+                  <span class="inv-name">Tomate</span>
+                  <span class="td-cat">Alimento/Consumo</span>
+                </div>
+                <div class="inv-item-bottom">
+                  <span><span class="inv-lbl">Estoque</span> 50 Un.</span>
+                  <span><span class="inv-lbl">Usado</span> 11 Un.</span>
+                  <span><span class="inv-lbl">Log</span> 2089-06-01</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop: tabela tradicional -->
+            <div class="table-scroll d-none d-md-block">
               <table class="inv-table">
                 <thead>
                   <tr>
@@ -386,26 +575,16 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </section>
 
           <!-- CARGA A CAMINHO -->
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-              min-height: 0;
-              overflow-y: auto;
-            "
-          >
-            <!-- Label do painel -->
+          <section class="cargo-col" aria-label="Carga a caminho">
             <div class="cargo-panel-label">
               <div class="card-label" style="margin-bottom: 0">
                 <i class="bi bi-rocket"></i> Carga a Caminho
               </div>
             </div>
 
-            <!-- Foguete 1 — Aterrissando -->
             <div class="cargo-card">
               <div class="cargo-header-row">
                 <span class="cargo-rocket-id">FOGUETE 2X-1298</span>
@@ -427,10 +606,9 @@
               </div>
             </div>
 
-            <!-- Foguete 2 — A Caminho (azul) -->
             <div class="cargo-card">
               <div class="cargo-header-row">
-                <span class="cargo-rocket-id">FOGUETE 2X-1298</span>
+                <span class="cargo-rocket-id">FOGUETE 2X-1299</span>
                 <span class="cargo-status a-caminho">A CAMINHO</span>
               </div>
               <div class="cargo-time-row">
@@ -449,10 +627,9 @@
               </div>
             </div>
 
-            <!-- Foguete 3 — A Caminho (azul) -->
             <div class="cargo-card">
               <div class="cargo-header-row">
-                <span class="cargo-rocket-id">FOGUETE 2X-1298</span>
+                <span class="cargo-rocket-id">FOGUETE 2X-1300</span>
                 <span class="cargo-status a-caminho">A CAMINHO</span>
               </div>
               <div class="cargo-time-row">
@@ -468,10 +645,9 @@
               <div class="cargo-desc">Veículo, pneus extras</div>
             </div>
 
-            <!-- Foguete 4 — Cancelado -->
             <div class="cargo-card cancelado-card">
               <div class="cargo-header-row">
-                <span class="cargo-rocket-id">FOGUETE 2X-1298</span>
+                <span class="cargo-rocket-id">FOGUETE 2X-1301</span>
                 <span class="cargo-status cancelado">CANCELADO</span>
               </div>
               <div class="cargo-time-row">
@@ -493,8 +669,7 @@
                 Veículos
               </div>
             </div>
-          </div>
-          <!-- /cargo col -->
+          </section>
         </div>
         <!-- /bottom-row -->
       </main>
@@ -502,7 +677,7 @@
     <!-- /main-wrapper -->
 
     <!-- STATUS BAR -->
-    <div class="statusbar">
+    <footer class="statusbar">
       <div class="statusbar-item">
         SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
       </div>
@@ -513,7 +688,7 @@
       <div class="statusbar-item">
         LOCAL: <span class="val-white">SINCRONIZADO</span>
       </div>
-    </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
