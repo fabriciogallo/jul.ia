@@ -1,16 +1,384 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Configurações</title>
-    <link rel="stylesheet" href="../assets/styles/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUL.IA | Configurações</title>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/img-favicon-jul-ia.png"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="config.css" />
   </head>
+
   <body>
-    <main style="padding: 20px">
-      <h1>Configurações</h1>
-      <p>Página placeholder: Configurações.</p>
-      <p><a href="../index.html">Voltar ao Dashboard</a></p>
-    </main>
+    <!-- Area Topbar -->
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img
+          src="../assets/images/img-logo-jul-ia.png"
+          alt="JUL.IA"
+          class="logo-jul-ia"
+        />
+      </div>
+      <div class="topbar-title">Configurações</div>
+      <div class="topbar-right">
+        <i class="bi bi-bell"></i>
+        <div class="avatar">
+          <img src="../assets/images/img-astronauta-user.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <!-- Area Sidebar -->
+      <nav class="sidebar">
+        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu"
+          ><i class="bi bi-list"></i
+        ></a>
+        <a class="nav-icon" href="../index.html" aria-label="Dashboard"
+          ><i class="bi bi-grid-1x2"></i
+        ></a>
+        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia"
+          ><i class="bi bi-lightning"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estufa.html" aria-label="Estufa">
+          <img
+            src="../assets/images/apple-light.svg"
+            width="18"
+            height="20"
+            alt="Icone Maçã"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/agua.html" aria-label="Água"
+          ><i class="bi bi-droplet"></i
+        ></a>
+        <a class="nav-icon" href="../pages/ar.html" aria-label="Ar"
+          ><i class="bi bi-wind"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estoque.html" aria-label="Estoque"
+          ><i class="bi bi-boxes"></i>
+        </a>
+        <a class="nav-icon" href="../pages/colonia.html" aria-label="Colônia"
+          ><img
+            src="../assets/images/icon-domo.png"
+            height="14"
+            alt="Icone Domo"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/astronautas.html" aria-label="Perfil"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+        <a class="nav-icon" href="../pages/drones.html" aria-label="Drones"
+          ><img
+            src="../assets/images/icon-drone.png"
+            height="16"
+            alt="Icone Drone"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda"
+          ><i class="bi bi-question-circle"></i
+        ></a>
+        <div class="spacer"></div>
+        <a
+          class="nav-icon active"
+          href="../pages/config.html"
+          aria-label="Configurações"
+          ><i class="bi bi-gear"></i
+        ></a>
+      </nav>
+
+      <!-- Area Main -->
+      <main class="content-area">
+        <!-- Cabeçalho da Página -->
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Configurações do Sistema</h1>
+            <p class="page-subtitle">
+              NÚCLEO LUNAR 01 // PROTOCOLOS DA ESTAÇÃO
+            </p>
+          </div>
+          <div class="page-header-status">
+            <div class="uptime">TEMPO ATIVO: <span>428:12:05</span></div>
+            <div class="status-otimo">STATUS: ÓTIMO</div>
+          </div>
+        </div>
+
+        <!-- Grid de Configurações -->
+        <div class="config-grid">
+          <!-- CARD: Exibição do Sistema -->
+          <div class="config-card">
+            <div class="config-card-header">
+              <i class="bi bi-display"></i>
+              <span>Exibição do Sistema</span>
+            </div>
+            <div class="config-card-divider"></div>
+
+            <!-- Modo Escuro -->
+            <div class="config-setting-row">
+              <div class="setting-info">
+                <div class="setting-label">Modo Escuro</div>
+                <div class="setting-desc">
+                  Redução de luminância no espaço profundo
+                </div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" checked />
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <!-- Alto Contraste -->
+            <div class="config-setting-row">
+              <div class="setting-info">
+                <div class="setting-label">Alto Contraste</div>
+                <div class="setting-desc">
+                  Legibilidade aprimorada para condições EVA
+                </div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="toggle-slider toggle-slider-dark"></span>
+              </label>
+            </div>
+
+            <!-- Escala da IU -->
+            <div class="config-slider-group">
+              <div class="slider-label-row">
+                <span class="slider-label">ESCALA DA IU</span>
+              </div>
+              <input
+                type="range"
+                class="config-range"
+                min="85"
+                max="120"
+                value="100"
+                id="escalaIU"
+              />
+              <div class="slider-marks">
+                <span>85%</span>
+                <span>100% (PADRÃO)</span>
+                <span>120%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD: Protocolos de Segurança -->
+          <div class="config-card">
+            <div class="config-card-header">
+              <i class="bi bi-shield-check"></i>
+              <span>Protocolos de Segurança</span>
+            </div>
+            <div class="config-card-divider"></div>
+
+            <!-- Nível do Protocolo -->
+            <div class="protocol-group">
+              <div class="protocol-label">NÍVEL DO PROTOCOLO</div>
+              <div class="protocol-selector">
+                <button class="protocol-btn" data-level="padrao">PADRÃO</button>
+                <button class="protocol-btn active" data-level="high">
+                  HIGH
+                </button>
+                <button class="protocol-btn" data-level="maximo">MÁXIMO</button>
+              </div>
+            </div>
+
+            <!-- 2FA Biométrico -->
+            <div class="config-setting-row">
+              <div class="setting-info">
+                <div class="setting-label">2FA Biométrico</div>
+                <div class="setting-desc">
+                  Requer escaneamento retiniano para acesso
+                </div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" checked />
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <!-- Bloqueio de Emergência -->
+            <button class="btn-emergency">
+              <i class="bi bi-lock-fill"></i>
+              BLOQUEIO DE EMERGÊNCIA
+            </button>
+          </div>
+
+          <!-- CARD: Configuração de Uplink -->
+          <div class="config-card">
+            <div class="config-card-header">
+              <i class="bi bi-broadcast"></i>
+              <span>Configuração de Uplink</span>
+            </div>
+            <div class="config-card-divider"></div>
+
+            <!-- Relay Status -->
+            <div class="relay-status">
+              <div class="relay-dot"></div>
+              <span class="relay-name">RELAY TERRA ESTÁVEL</span>
+              <span class="relay-latency">LATÊNCIA DE 245ms</span>
+            </div>
+
+            <!-- Satélite Principal -->
+            <div class="uplink-field-group">
+              <label class="uplink-label">SATÉLITE PRINCIPAL</label>
+              <div class="uplink-select-wrapper">
+                <select class="uplink-select">
+                  <option selected>ARTEMIS-GATEWAY-IV</option>
+                  <option>ARTEMIS-GATEWAY-III</option>
+                  <option>LUNA-RELAY-07</option>
+                </select>
+                <i class="bi bi-chevron-down uplink-select-icon"></i>
+              </div>
+            </div>
+
+            <!-- Métricas de Uplink -->
+            <div class="uplink-metrics">
+              <div class="uplink-metric">
+                <div class="uplink-metric-label">DOWNLINK</div>
+                <div class="uplink-metric-value uplink-blue">12,4 GBPS</div>
+              </div>
+              <div class="uplink-metric">
+                <div class="uplink-metric-label">CAPACIDADE DE RAJADA</div>
+                <div class="uplink-metric-value uplink-green">98,2%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD: IA e Automação -->
+          <div class="config-card">
+            <div class="config-card-header">
+              <i class="bi bi-cpu"></i>
+              <span>IA e Automação</span>
+            </div>
+            <div class="config-card-divider"></div>
+
+            <!-- Sensibilidade da IA -->
+            <div class="config-slider-group">
+              <div class="slider-label-row ia-level-row">
+                <span class="slider-label"
+                  >SENSIBILIDADE DO ASSISTENTE DE IA</span
+                >
+                <span class="ia-level-value">NÍVEL 7</span>
+              </div>
+              <input
+                type="range"
+                class="config-range"
+                min="1"
+                max="10"
+                value="7"
+                id="sensiIA"
+              />
+              <div class="ia-hint">
+                Níveis mais altos permitem que a IA tome ações corretivas sem
+                aprovação do CMD.
+              </div>
+            </div>
+
+            <!-- Balanceamento Automático -->
+            <div class="config-setting-row" style="margin-top: 16px">
+              <div class="setting-info">
+                <div class="setting-label">
+                  Balanceamento Automático de Recursos
+                </div>
+                <div class="setting-desc">
+                  Distribuição preditiva de oxigênio e energia
+                </div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" checked />
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <!-- Botões Recalibrar / Aplicar -->
+            <div class="ia-actions">
+              <button class="btn-recalibrar">RECALIBRAR</button>
+              <button class="btn-aplicar">APLICAR LÓGICA</button>
+            </div>
+          </div>
+        </div>
+        <!-- /config-grid -->
+
+        <!-- Footer Actions -->
+        <div class="page-footer-actions">
+          <button class="btn-descartar">DESCARTAR ALTERAÇÕES</button>
+          <button class="btn-salvar">SALVAR CONFIGURAÇÃO</button>
+        </div>
+      </main>
+      <!-- /content-area -->
+    </div>
+    <!-- /main-wrapper -->
+
+    <!-- Area Footer / Statusbar -->
+    <div class="statusbar">
+      <div class="statusbar-item">
+        SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
+      </div>
+      <div class="statusbar-item" style="margin-left: auto">
+        REDE: <span class="val-white">ESTÁVEL</span>
+      </div>
+      <div class="statusbar-item">SAT: <span class="val-blue">14MS</span></div>
+      <div class="statusbar-item">
+        LOCAL: <span class="val-white">SINCRONIZADO</span>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Protocol selector
+      const protocolBtns = document.querySelectorAll(".protocol-btn");
+      protocolBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          protocolBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+
+      // Slider IA level display
+      const sensiIA = document.getElementById("sensiIA");
+      const iaLevelVal = document.querySelector(".ia-level-value");
+      if (sensiIA && iaLevelVal) {
+        sensiIA.addEventListener("input", () => {
+          iaLevelVal.textContent = "NÍVEL " + sensiIA.value;
+        });
+      }
+    </script>
   </body>
 </html>

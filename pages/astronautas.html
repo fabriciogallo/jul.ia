@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUL.IA | Astronautas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Exo+2:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/img-favicon-jul-ia.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/styles/astronautas.css" />
+  </head>
+
+  <body>
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="topbar-logo">
+        <img
+          src="../assets/images/img-logo-jul-ia.png"
+          alt="JUL.IA"
+          class="logo-jul-ia"
+        />
+      </div>
+      <div class="topbar-title">Astronautas</div>
+      <div class="topbar-right">
+        <i class="bi bi-bell"></i>
+        <div class="avatar">
+          <img src="../assets/images/img-astronauta-user.png" alt="Avatar" />
+        </div>
+      </div>
+    </header>
+
+    <div class="main-wrapper">
+      <nav class="sidebar">
+        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu"
+          ><i class="bi bi-list"></i
+        ></a>
+        <a class="nav-icon" href="../index.html" aria-label="Dashboard"
+          ><i class="bi bi-grid-1x2"></i
+        ></a>
+        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia"
+          ><i class="bi bi-lightning"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estufa.html" aria-label="Estufa">
+          <img
+            src="../assets/images/apple-light.svg"
+            width="18"
+            height="20"
+            alt="Icone Maçã"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/agua.html" aria-label="Água"
+          ><i class="bi bi-droplet"></i
+        ></a>
+        <a class="nav-icon" href="../pages/ar.html" aria-label="Ar"
+          ><i class="bi bi-wind"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estoque.html" aria-label="Estoque"
+          ><i class="bi bi-boxes"></i>
+        </a>
+        <a class="nav-icon" href="../pages/colonia.html" aria-label="Colônia"
+          ><img
+            src="../assets/images/icon-domo.png"
+            height="14"
+            alt="Icone Domo"
+          />
+        </a>
+        <a
+          class="nav-icon active"
+          href="../pages/astronautas.html"
+          aria-label="Perfil"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+        <a class="nav-icon" href="../pages/drones.html" aria-label="Drones"
+          ><img
+            src="../assets/images/icon-drone.png"
+            height="16"
+            alt="Icone Domo"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda"
+          ><i class="bi bi-question-circle"></i
+        ></a>
+        <div class="spacer"></div>
+
+        <a
+          class="nav-icon"
+          href="../pages/config.html"
+          aria-label="Configurações"
+          ><i class="bi bi-gear"></i
+        ></a>
+      </nav>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="content-area">
+        <!-- PERFIL DO ASTRONAUTA -->
+        <div class="astronaut-id-bar">
+          <i class="bi bi-person-badge"></i>
+          <span class="astro-name">FABRICIO C S GALLO</span>
+          <span class="astro-sep">—</span>
+          <span class="astro-meta">06/15/2001</span>
+          <span class="astro-sep">—</span>
+          <span class="astro-meta">O+</span>
+        </div>
+
+        <!-- GRADE PRINCIPAL -->
+        <div class="astro-grid">
+          <div class="col-left">
+            <div class="vitals-panel">
+              <div class="vitals-list">
+                <div class="vital-item">
+                  <div class="vital-icon-label">
+                    <i class="bi bi-heart-fill" style="color: #f44336"></i>
+                    <span class="vital-label">BATIMENTO<br />CARDÍACO</span>
+                  </div>
+                  <div class="vital-value">
+                    81 <span class="vital-unit">BPM</span>
+                  </div>
+                </div>
+
+                <div class="vital-item">
+                  <div class="vital-icon-label">
+                    <i class="bi bi-activity" style="color: #ffd600"></i>
+                    <span class="vital-label">PRESSÃO<br />SANGUÍNEA</span>
+                  </div>
+                  <div class="vital-value">
+                    110/70 <span class="vital-unit">MMHG</span>
+                  </div>
+                </div>
+
+                <div class="vital-item">
+                  <div class="vital-icon-label">
+                    <i
+                      class="bi bi-thermometer-half"
+                      style="color: #2196f3"
+                    ></i>
+                    <span class="vital-label">TEMPERATURA</span>
+                  </div>
+                  <div class="vital-value">
+                    36.8° <span class="vital-unit">C</span>
+                  </div>
+                </div>
+
+                <div class="vital-item">
+                  <div class="vital-icon-label">
+                    <i class="bi bi-droplet-fill" style="color: #00c853"></i>
+                    <span class="vital-label">OXIGÊNIO<br />SANGUE</span>
+                  </div>
+                  <div class="vital-value">
+                    110/70 <span class="vital-unit">MMHG</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vídeo do astronauta (wireframe animado) -->
+              <div class="astro-video-wrap">
+                <video
+                  class="astro-video"
+                  src="../assets/images/video-astronauta.mov"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  aria-label="Modelo 3D wireframe do astronauta"
+                ></video>
+                <div class="video-fallback" aria-hidden="true">
+                  <i class="bi bi-person-standing"></i>
+                </div>
+              </div>
+            </div>
+            <!-- /vitals-panel -->
+
+            <!-- ALERTAS MÉDICOS -->
+            <div class="alerts-card">
+              <div class="card-label">
+                <i class="bi bi-bandaid"></i> Alertas Médicos
+              </div>
+              <div class="alerts-row">
+                <div class="alert-item alert-yellow">
+                  <span class="alert-time">[14:02:11]</span>
+                  <p class="alert-text">
+                    EXPOSIÇÃO A NÍVEIS ELEVADOS DE RADIAÇÃO, ESCUDOS AUTOMÁTICOS
+                    ATIVOS
+                  </p>
+                </div>
+
+                <div class="alert-item alert-red">
+                  <span class="alert-time">[14:02:11]</span>
+                  <p class="alert-text">
+                    LESÃO DETECTADA: INFLAMAÇÃO NOS MÚSCULOS DO OMBRO DIREITO
+                  </p>
+                </div>
+
+                <div class="alert-item alert-green">
+                  <span class="alert-time">[14:02:11]</span>
+                  <p class="alert-text">
+                    NOITE BEM DORMIDA: ESTA COM 94 PONTOS DE QUALIDADE DE SONO.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /col-left -->
+
+          <div class="col-right">
+            <!-- ATIVIDADES -->
+            <div class="activities-card">
+              <div class="card-label">
+                <i class="bi bi-check2-square"></i> Atividades
+              </div>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="activity-time">[14:02:11]</span>
+                  <span class="activity-desc"
+                    >CUIDAR PLANTAS
+                    <span class="activity-sector"
+                      >[SETOR HIDROPÔNICOS]</span
+                    ></span
+                  >
+                </div>
+                <div class="activity-item">
+                  <span class="activity-time">[14:02:11]</span>
+                  <span class="activity-desc"
+                    >CUIDAR DRONES
+                    <span class="activity-sector">[SETOR MÁQUINAS]</span></span
+                  >
+                </div>
+                <div class="activity-item">
+                  <span class="activity-time">[14:02:11]</span>
+                  <span class="activity-desc"
+                    >CUIDAR MOTORES
+                    <span class="activity-sector">[SETOR VEÍCULOS]</span></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- TRAJE -->
+            <div class="suit-card">
+              <div class="card-label">
+                <i class="bi bi-person-workspace"></i> Traje
+              </div>
+              <div class="suit-grid">
+                <div class="suit-item">
+                  <div class="suit-item-label">
+                    <i class="bi bi-person-workspace"></i> CAPACETE
+                  </div>
+                  <div class="suit-item-value status-ok">OK</div>
+                </div>
+
+                <div class="suit-item">
+                  <div class="suit-item-label">
+                    <i class="bi bi-wind"></i> RESPIRADOR
+                  </div>
+                  <div class="suit-item-sublabel">AUTONOMIA DE</div>
+                  <div class="suit-item-value">
+                    6HRS <span class="suit-min">43MIN</span>
+                  </div>
+                </div>
+
+                <div class="suit-item">
+                  <div class="suit-item-label">
+                    <i class="bi bi-battery-half"></i> BATERIA
+                  </div>
+                  <div class="suit-item-value">92%</div>
+                </div>
+
+                <div class="suit-item">
+                  <div class="suit-item-label">
+                    <i class="bi bi-thermometer-half"></i> TEMPERATURA
+                  </div>
+                  <div class="suit-item-value">
+                    35°<span class="suit-min">C</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STATUS NUTRICIONAL -->
+            <div class="nutrition-card">
+              <div class="card-label">
+                <i class="bi bi-bar-chart-line"></i> Status Nutricional
+              </div>
+              <div class="nutrition-list">
+                <div class="nutr-item">
+                  <div class="nutr-header">
+                    <span class="nutr-label nutr-blue"
+                      ><i class="bi bi-droplet"></i> HIDRATAÇÃO</span
+                    >
+                    <span class="nutr-val nutr-val-red">15</span>
+                  </div>
+                  <div class="nutr-bar-track">
+                    <div
+                      class="nutr-bar-fill nutr-fill-blue"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="nutr-item">
+                  <div class="nutr-header">
+                    <span class="nutr-label nutr-green"
+                      ><i class="bi bi-apple"></i> NUTRIENTES</span
+                    >
+                    <span class="nutr-val nutr-val-red">15</span>
+                  </div>
+                  <div class="nutr-bar-track">
+                    <div
+                      class="nutr-bar-fill nutr-fill-green"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="nutr-item">
+                  <div class="nutr-header">
+                    <span class="nutr-label nutr-yellow"
+                      ><i class="bi bi-lightning"></i> ENERGIA</span
+                    >
+                    <span class="nutr-val nutr-val-green">88</span>
+                  </div>
+                  <div class="nutr-bar-track">
+                    <div
+                      class="nutr-bar-fill nutr-fill-yellow"
+                      style="width: 88%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="nutr-item">
+                  <div class="nutr-header">
+                    <span class="nutr-label nutr-red"
+                      ><i class="bi bi-bandaid"></i> RECUPERAÇÃO</span
+                    >
+                    <span class="nutr-val nutr-val-yellow">42</span>
+                  </div>
+                  <div class="nutr-bar-track">
+                    <div
+                      class="nutr-bar-fill nutr-fill-red"
+                      style="width: 42%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- STATUS BAR -->
+    <footer class="statusbar">
+      <div class="statusbar-item">
+        SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
+      </div>
+      <div class="statusbar-item" style="margin-left: auto">
+        REDE: <span class="val-white">ESTÁVEL</span>
+      </div>
+      <div class="statusbar-item">SAT: <span class="val-blue">14MS</span></div>
+      <div class="statusbar-item">
+        LOCAL: <span class="val-white">SINCRONIZADO</span>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
