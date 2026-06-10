@@ -1,0 +1,198 @@
+/* ============================================================
+   AR.CSS — Mobile First
+   Breakpoints: sm → 576px | lg → 992px
+   ============================================================ */
+
+/* ── Imagem do gráfico ── */
+.img-grafico {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ── Cards de métrica ── */
+.ar-badge-icon {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--text-dark);
+  letter-spacing: 0;
+}
+
+.ar-badge-N {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.ar-metric-valor {
+  font-family: var(--font-mono);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.ar-metric-unit {
+  font-size: 16px;
+  color: var(--text-mid);
+  margin-left: 2px;
+}
+
+.ar-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: #33343c;
+}
+
+.ar-bar-fill {
+  background-color: var(--accent-blue) !important;
+  border-radius: 3px;
+}
+
+/* ── Qualidade do Ar ── */
+.qar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.qar-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 6px;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.qar-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.qar-nome {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.qar-nome-alerta {
+  color: var(--accent-red);
+}
+
+.qar-qld {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+.qar-qld-ok {
+  color: var(--accent-blue);
+}
+.qar-qld-alerta {
+  color: var(--accent-red);
+}
+
+/* Donuts (círculos de qualidade) feitos com CSS border */
+.qar-donut {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px solid #e9ecef;
+  flex-shrink: 0;
+}
+
+/* Colônia — preenchimento invisível (100%, só contorno) */
+.qar-donut-ok {
+  background: conic-gradient(var(--accent-green));
+  border: none;
+  /* anel: máscara circular central branca */
+  -webkit-mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+  mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+}
+
+/* Hidropônicos — arco azul ~89% usando conic-gradient */
+.qar-donut-bom {
+  background: conic-gradient(var(--accent-blue) 320deg, #33343c 320deg);
+  border: none;
+  /* anel: máscara circular central branca */
+  -webkit-mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+  mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+}
+
+/* Mineradora — arco vermelho ~75% */
+.qar-donut-alerta {
+  background: conic-gradient(var(--accent-red) 270deg, #33343c 270deg);
+  border: none;
+  -webkit-mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+  mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+}
+
+/* ── Controles ── */
+.ctrl-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ctrl-nome {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dark);
+}
+
+/* Toggle (padrão do projeto, variante verde) */
+.toggle-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-label {
+  display: block;
+  width: 40px;
+  height: 22px;
+  background: #ccc;
+  border-radius: 11px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s;
+}
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: left 0.25s;
+}
+
+.toggle-input:checked + .toggle-label.toggle-green {
+  background: var(--accent-green);
+}
+.toggle-input:checked + .toggle-label::after {
+  left: 21px;
+}

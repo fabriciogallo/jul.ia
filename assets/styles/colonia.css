@@ -1,0 +1,231 @@
+/* No desktop a área principal ocupa a altura disponível */
+@media (min-width: 992px) {
+  .colonia-main {
+    height: 100%;
+  }
+  .colonia-main > .row {
+    height: 100%;
+  }
+}
+
+/* ── Utilitário para badge de ícone (O2, CO2) ── */
+.ar-badge-icon {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--text-dark);
+}
+
+/* ── Informações ── */
+.info-item {
+  margin-bottom: 14px;
+}
+
+.info-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.info-val {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-mid);
+}
+
+.info-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: #e9ecef;
+}
+
+/* Cores das barras e labels */
+.info-roxo {
+  color: #9c27b0;
+}
+.info-azul {
+  color: var(--accent-blue);
+}
+.info-amarelo {
+  color: var(--accent-yellow);
+}
+.info-verde {
+  color: var(--accent-green);
+}
+
+.info-bar-roxo {
+  background-color: #9c27b0 !important;
+}
+.info-bar-azul {
+  background-color: var(--accent-blue) !important;
+}
+.info-bar-amarelo {
+  background-color: var(--accent-yellow) !important;
+}
+.info-bar-verde {
+  background-color: var(--accent-green) !important;
+}
+
+/* ── Feed de Alertas ── */
+.feed-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* Mobile: altura fixa com scroll */
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+/* Desktop: cresce junto com a coluna */
+@media (min-width: 992px) {
+  .feed-scroll {
+    max-height: none;
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+.feed-scroll::-webkit-scrollbar {
+  width: 3px;
+}
+.feed-scroll::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 2px;
+}
+
+.feed-item {
+  border-left: 3px solid transparent;
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+.feed-time {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.feed-msg {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* Variantes do feed */
+.feed-critico {
+  background: #fff0f0;
+  border-left-color: var(--accent-red);
+}
+.feed-critico .feed-time,
+.feed-critico .feed-msg {
+  color: var(--accent-red);
+}
+
+.feed-alerta {
+  background: #fff8f0;
+  border-left-color: var(--accent-orange);
+}
+.feed-alerta .feed-time,
+.feed-alerta .feed-msg {
+  color: var(--accent-orange);
+}
+
+.feed-info {
+  background: #f0f7ff;
+  border-left-color: var(--accent-blue);
+}
+.feed-info .feed-time,
+.feed-info .feed-msg {
+  color: var(--accent-blue);
+}
+
+.feed-normal {
+  background: #f8f8f8;
+  border-left-color: #ccc;
+}
+.feed-normal .feed-time,
+.feed-normal .feed-msg {
+  color: var(--text-mid);
+}
+
+/* ── Mídia central (imagem ou vídeo da colônia) ── */
+.colonia-media-card {
+  overflow: hidden;
+  border-radius: 10px;
+  /* Mobile: altura mínima para a imagem aparecer bem */
+  min-height: 280px;
+}
+
+@media (min-width: 992px) {
+  .colonia-media-card {
+    min-height: unset;
+  }
+}
+
+.colonia-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Mobile: altura fixa */
+  min-height: 280px;
+}
+
+@media (min-width: 992px) {
+  .colonia-media {
+    min-height: unset;
+  }
+}
+
+/* ── Lista de Setores ── */
+.setor-list-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.setor-list-nome {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.setor-list-status {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-light);
+}
+
+/* Cores dos status */
+.status-ok {
+  color: var(--accent-green);
+}
+.status-andamento {
+  color: var(--accent-blue);
+}
+.status-alerta {
+  color: var(--accent-orange);
+}
+.status-neutro {
+  color: var(--text-mid);
+}

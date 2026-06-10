@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUL.IA | Colônia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/img-favicon-jul-ia.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../assets/styles/index.css" />
+    <link rel="stylesheet" href="../assets/styles/colonia.css" />
+  </head>
+
+  <body>
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img
+          src="../assets/images/img-logo-jul-ia.png"
+          alt="JUL.IA"
+          class="logo-jul-ia"
+        />
+      </div>
+      <div class="topbar-title">Colônia</div>
+      <div class="topbar-right">
+        <i class="bi bi-bell"></i>
+        <div class="avatar">
+          <img src="../assets/images/img-astronauta-user.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <nav class="sidebar">
+        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu"
+          ><i class="bi bi-list"></i
+        ></a>
+        <a class="nav-icon" href="../index.html" aria-label="Dashboard"
+          ><i class="bi bi-grid-1x2"></i
+        ></a>
+        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia"
+          ><i class="bi bi-lightning"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estufa.html" aria-label="Estufa">
+          <img
+            src="../assets/images/apple-light.svg"
+            width="18"
+            height="20"
+            alt="maçã"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/agua.html" aria-label="Água"
+          ><i class="bi bi-droplet"></i
+        ></a>
+        <a class="nav-icon" href="../pages/ar.html" aria-label="Ar"
+          ><i class="bi bi-wind"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estoque.html" aria-label="Estoque"
+          ><i class="bi bi-boxes"></i>
+        </a>
+        <a class="nav-icon" href="pages/colonia.html" aria-label="Colônia"
+          ><img
+            src="../assets/images/icon-domo-ativo.png"
+            height="14"
+            alt="Icone Domo"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/perfil.html" aria-label="Perfil"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+        <a class="nav-icon" href="../pages/cpu.html" aria-label="CPU"
+          ><i class="bi bi-cpu"></i
+        ></a>
+        <a
+          class="nav-icon"
+          href="../pages/transporte.html"
+          aria-label="Transporte"
+          ><i class="bi bi-truck"></i
+        ></a>
+        <div class="spacer"></div>
+        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda"
+          ><i class="bi bi-question-circle"></i
+        ></a>
+        <a
+          class="nav-icon active"
+          href="../pages/colonia.html"
+          aria-label="Configurações"
+          ><i class="bi bi-gear"></i
+        ></a>
+      </nav>
+
+      <main class="content-area colonia-main">
+        <div class="row g-3 h-100">
+          <!-- COLUNA ESQUERDA: Informações + Feed -->
+          <div class="col-12 col-lg-3 d-flex flex-column gap-3">
+            <!-- Informações -->
+            <div class="dash-card">
+              <div class="card-label mb-3">
+                <i class="bi bi-info-circle"></i> Informações
+              </div>
+
+              <div class="info-item">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-1"
+                >
+                  <span class="info-label info-roxo"
+                    ><i class="bi bi-people"></i> POPULAÇÃO</span
+                  >
+                  <span class="info-val">15</span>
+                </div>
+                <div class="progress info-bar">
+                  <div
+                    class="progress-bar info-bar-roxo"
+                    style="width: 100%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-1"
+                >
+                  <span class="info-label info-azul"
+                    ><span class="ar-badge-icon">O<sub>2</sub></span> RESERVA DE
+                    O²</span
+                  >
+                  <span class="info-val">15</span>
+                </div>
+                <div class="progress info-bar">
+                  <div
+                    class="progress-bar info-bar-azul"
+                    style="width: 100%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-1"
+                >
+                  <span class="info-label info-amarelo"
+                    ><i class="bi bi-lightning-fill"></i> CAPACIDADE DE
+                    ENERGIA</span
+                  >
+                  <span class="info-val">15</span>
+                </div>
+                <div class="progress info-bar">
+                  <div
+                    class="progress-bar info-bar-amarelo"
+                    style="width: 100%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="info-item" style="margin-bottom: 0">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-1"
+                >
+                  <span class="info-label info-verde"
+                    ><span class="ar-badge-icon" style="font-size: 9px"
+                      >CO<sub>2</sub></span
+                    >
+                    GERAÇÃO DE CO²</span
+                  >
+                  <span class="info-val">15</span>
+                </div>
+                <div class="progress info-bar">
+                  <div
+                    class="progress-bar info-bar-verde"
+                    style="width: 100%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feed de Alertas -->
+            <div class="dash-card feed-card flex-grow-1">
+              <div class="card-label mb-3">
+                <i class="bi bi-exclamation-triangle"></i> Feed de Alertas
+              </div>
+
+              <div class="feed-scroll">
+                <div class="feed-item feed-critico">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    CRÍTICO: RACHADURA ENCONTRADA NO SETOR 4-IB, DRONES DE
+                    REPARO JÁ OPERANTES
+                  </div>
+                </div>
+
+                <div class="feed-item feed-normal">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    DRONES DE PATRULHA DN-01 E DN-02 VOLTANDO PARA A ESTAÇÃO
+                  </div>
+                </div>
+
+                <div class="feed-item feed-alerta">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    ALERTA: ANOMALIA SISMICA DETECTADA, MAGNITUDE 1.2, AINDA
+                    MONITORANDO
+                  </div>
+                </div>
+
+                <div class="feed-item feed-info">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    ATUALIZAÇÃO: NA DE ENTREGA CHEGANDO NA ORBITA, MENOS DE 1
+                    HORA PARA O POUSO
+                  </div>
+                </div>
+
+                <div class="feed-item feed-normal">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    DRONES DE REPARO ESTÃO 100% CARREGADOS E PRONTOS PARA O USO
+                  </div>
+                </div>
+
+                <div class="feed-item feed-normal">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    SISTEMA DE RECICLAGEM DE AR OPERANDO EM MODO PADRÃO
+                  </div>
+                </div>
+
+                <div class="feed-item feed-alerta">
+                  <div class="feed-time">[14:02:11]</div>
+                  <div class="feed-msg">
+                    ALERTA: NÍVEL DE CO² NO SETOR 7 ACIMA DO LIMITE RECOMENDADO
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUNA CENTRAL: Imagem/Vídeo da colônia -->
+          <div class="col-12 col-lg-6">
+            <div class="dash-card p-0 colonia-media-card h-100">
+              <video
+                class="domo-media"
+                autoplay
+                muted
+                loop
+                playsinline
+                src="../assets/images/video-domo.mp4"
+              ></video>
+            </div>
+          </div>
+
+          <!-- COLUNA DIREITA: Setores -->
+          <div class="col-12 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-3">
+                <i class="bi bi-geo-alt"></i> Setores
+              </div>
+
+              <div class="setor-list">
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-002 - PESQUISA]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-andamento">EM ANDAMENTO</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-003 - MANUTENÇÃO]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-neutro">PROGRAMADA</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-004 - HABITAÇÃO]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-neutro">OCUPADA</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">
+                    [SETOR-005 - CONTROLE AMBNT]
+                  </div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-ok">OTIMIZADO</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-006 - ENERGIA]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-ok">ESTÁVEL</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-007 - COMUNICAÇÃO]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-ok">OPERANTE</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-008 - CONTROLE]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-neutro">REVISANDO DADOS</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-009 - ARMAZENAMENTO]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-alerta">QUASE CHEIO</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-010 - SEGURANÇA]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-ok">MONITORANDO</span>
+                  </div>
+                </div>
+
+                <div class="setor-list-item">
+                  <div class="setor-list-nome">[SETOR-011 - RECURSOS]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-alerta">EM RECUPERAÇÃO</span>
+                  </div>
+                </div>
+
+                <div
+                  class="setor-list-item"
+                  style="
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                  "
+                >
+                  <div class="setor-list-nome">[SETOR-012 - LOGÍSTICA]</div>
+                  <div class="setor-list-status">
+                    STATUS: <span class="status-neutro">CARREGANDO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="statusbar">
+      <div class="statusbar-item">
+        SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
+      </div>
+      <div class="statusbar-item ms-auto">
+        REDE: <span class="val-white">ESTÁVEL</span>
+      </div>
+      <div class="statusbar-item">SAT: <span class="val-blue">14MS</span></div>
+      <div class="statusbar-item">
+        LOCAL: <span class="val-white">SINCRONIZADO</span>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

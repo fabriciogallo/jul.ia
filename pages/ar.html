@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUL.IA | AR</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/img-favicon-jul-ia.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../assets/styles/index.css" />
+    <link rel="stylesheet" href="../assets/styles/ar.css" />
+  </head>
+
+  <body>
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img
+          src="../assets/images/img-logo-jul-ia.png"
+          alt="JUL.IA"
+          class="logo-jul-ia"
+        />
+      </div>
+      <div class="topbar-title">AR</div>
+      <div class="topbar-right">
+        <i class="bi bi-bell"></i>
+        <div class="avatar">
+          <img src="../assets/images/img-astronauta-user.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <nav class="sidebar">
+        <a class="nav-icon" href="../pages/menu.html" aria-label="Menu"
+          ><i class="bi bi-list"></i
+        ></a>
+        <a class="nav-icon" href="../index.html" aria-label="Dashboard"
+          ><i class="bi bi-grid-1x2"></i
+        ></a>
+        <a class="nav-icon" href="../pages/energia.html" aria-label="Energia"
+          ><i class="bi bi-lightning"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estufa.html" aria-label="Estufa">
+          <img
+            src="../assets/images/apple-light.svg"
+            width="18"
+            height="20"
+            alt="maçã"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/agua.html" aria-label="Água"
+          ><i class="bi bi-droplet"></i
+        ></a>
+        <a class="nav-icon active" href="../pages/ar.html" aria-label="Ar"
+          ><i class="bi bi-wind"></i
+        ></a>
+        <a class="nav-icon" href="../pages/estoque.html" aria-label="Estoque"
+          ><i class="bi bi-boxes"></i>
+        </a>
+        <a class="nav-icon" href="pages/colonia.html" aria-label="Colônia"
+          ><img
+            src="../assets/images/icon-domo.png"
+            height="14"
+            alt="Icone Domo"
+          />
+        </a>
+        <a class="nav-icon" href="../pages/perfil.html" aria-label="Perfil"
+          ><i class="bi bi-person-circle"></i
+        ></a>
+        <a class="nav-icon" href="../pages/cpu.html" aria-label="CPU"
+          ><i class="bi bi-cpu"></i
+        ></a>
+        <a
+          class="nav-icon"
+          href="../pages/transporte.html"
+          aria-label="Transporte"
+          ><i class="bi bi-truck"></i
+        ></a>
+        <div class="spacer"></div>
+        <a class="nav-icon" href="../pages/ajuda.html" aria-label="Ajuda"
+          ><i class="bi bi-question-circle"></i
+        ></a>
+        <a
+          class="nav-icon"
+          href="../pages/config.html"
+          aria-label="Configurações"
+          ><i class="bi bi-gear"></i
+        ></a>
+      </nav>
+
+      <main class="content-area">
+        <!-- LINHA 1: 4 cards de métricas -->
+        <div class="row g-3 mb-3">
+          <!-- O2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-2">
+                <span class="ar-badge-icon">O<sub>2</sub></span> Nível de O²
+              </div>
+              <div class="ar-metric-valor">
+                95.4<span class="ar-metric-unit">%</span>
+              </div>
+              <div class="progress ar-bar mt-2">
+                <div
+                  class="progress-bar ar-bar-fill"
+                  style="width: 95.4%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CO2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-2">
+                <span class="ar-badge-icon">CO<sub>2</sub></span> Concentração
+                de CO²
+              </div>
+              <div class="ar-metric-valor">
+                0.04<span class="ar-metric-unit">%</span>
+              </div>
+              <div class="progress ar-bar mt-2">
+                <div class="progress-bar ar-bar-fill" style="width: 4%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- N -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-2">
+                <span class="ar-badge-icon ar-badge-N">N</span> Nitrogênio
+              </div>
+              <div class="ar-metric-valor">
+                78.1<span class="ar-metric-unit">%</span>
+              </div>
+              <div class="progress ar-bar mt-2">
+                <div
+                  class="progress-bar ar-bar-fill"
+                  style="width: 78.1%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pressão -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="dash-card h-100">
+              <div class="card-label mb-2">
+                <i class="bi bi-speedometer2"></i> Pressão Interna
+              </div>
+              <div class="ar-metric-valor">
+                101.3<span class="ar-metric-unit">kPa</span>
+              </div>
+              <div class="progress ar-bar mt-2">
+                <div class="progress-bar ar-bar-fill" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINHA 2: Gráfico (imagem) + Qualidade do Ar + Controles -->
+        <div class="row g-3">
+          <!-- Gráfico como imagem -->
+          <div class="col-12 col-lg-9">
+            <div class="dash-card">
+              <div class="card-label mb-3">
+                <i class="bi bi-leaf"></i> Produção de CO²
+              </div>
+              <img
+                src="../assets/images/img-dados-ar.png"
+                alt="Gráfico de Produção de CO² — 24hrs"
+                class="img-grafico"
+              />
+            </div>
+          </div>
+
+          <!-- Coluna direita -->
+          <div class="col-12 col-lg-3 d-flex flex-column gap-3">
+            <!-- Qualidade do Ar -->
+            <div class="dash-card">
+              <div class="card-label mb-3">
+                <i class="bi bi-star"></i> Qualidade do ar
+              </div>
+
+              <!-- Colônia A-1 -->
+              <div class="qar-item">
+                <div class="qar-tag" style="background: #1a1a1a">A-1</div>
+                <div class="qar-info">
+                  <div class="qar-nome">Colônia</div>
+                  <div class="qar-qld qar-qld-ok">QLD: 100% (EXCELENTE)</div>
+                </div>
+                <div class="qar-donut qar-donut-ok"></div>
+              </div>
+
+              <!-- Hidropônicos B-4 -->
+              <div class="qar-item">
+                <div class="qar-tag" style="background: #1a1a1a">B-4</div>
+                <div class="qar-info">
+                  <div class="qar-nome">Hidropônicos</div>
+                  <div class="qar-qld qar-qld-ok">QLD: 89% (BOM)</div>
+                </div>
+                <div class="qar-donut qar-donut-bom"></div>
+              </div>
+
+              <!-- Mineradora C-2 -->
+              <div
+                class="qar-item"
+                style="border-bottom: none; margin-bottom: 0; padding-bottom: 0"
+              >
+                <div class="qar-tag" style="background: #1a1a1a">C-2</div>
+                <div class="qar-info">
+                  <div class="qar-nome qar-nome-alerta">Mineradora</div>
+                  <div class="qar-qld qar-qld-alerta">QLD: 75% (ALERTA)</div>
+                </div>
+                <div class="qar-donut qar-donut-alerta"></div>
+              </div>
+            </div>
+
+            <!-- Controles -->
+            <div class="dash-card">
+              <div class="card-label mb-3">
+                <i class="bi bi-leaf"></i> Controles
+              </div>
+
+              <div class="ctrl-item">
+                <span class="ctrl-nome">Auto. Controle de umidade</span>
+                <div class="toggle-wrap">
+                  <input
+                    type="checkbox"
+                    id="ctrl1"
+                    class="toggle-input"
+                    checked
+                  />
+                  <label for="ctrl1" class="toggle-label toggle-green"></label>
+                </div>
+              </div>
+
+              <div class="ctrl-item">
+                <span class="ctrl-nome">Monit. de Energia</span>
+                <div class="toggle-wrap">
+                  <input
+                    type="checkbox"
+                    id="ctrl2"
+                    class="toggle-input"
+                    checked
+                  />
+                  <label for="ctrl2" class="toggle-label toggle-green"></label>
+                </div>
+              </div>
+
+              <div
+                class="ctrl-item"
+                style="border-bottom: none; margin-bottom: 0; padding-bottom: 0"
+              >
+                <span class="ctrl-nome">Data Analytics</span>
+                <div class="toggle-wrap">
+                  <input
+                    type="checkbox"
+                    id="ctrl3"
+                    class="toggle-input"
+                    checked
+                  />
+                  <label for="ctrl3" class="toggle-label toggle-green"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="statusbar">
+      <div class="statusbar-item">
+        SISTEMA CENTRAL: <span class="val-green">ATIVO</span>
+      </div>
+      <div class="statusbar-item ms-auto">
+        REDE: <span class="val-white">ESTÁVEL</span>
+      </div>
+      <div class="statusbar-item">SAT: <span class="val-blue">14MS</span></div>
+      <div class="statusbar-item">
+        LOCAL: <span class="val-white">SINCRONIZADO</span>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,639 @@
+/* ── TOKENS (mesmos do index) ── */
+:root {
+  --bg-main: #f0f0ec;
+  --bg-card: #ffffff;
+  --bg-sidebar: #1a1a1a;
+  --bg-topbar: #1a1a1a;
+  --text-dark: #111111;
+  --text-mid: #555555;
+  --text-light: #aaaaaa;
+  --accent-green: #00c853;
+  --accent-blue: #2196f3;
+  --accent-cyan: #00bcd4;
+  --accent-yellow: #ffd600;
+  --accent-red: #f44336;
+  --accent-orange: #ff6d00;
+  --border: #e0e0e0;
+  --row-alt: #f5f6f7;
+  --font-mono: "Space Mono", monospace;
+  --font-body: "Exo 2", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-main);
+  color: var(--text-dark);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--bg-topbar);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+  flex-shrink: 0;
+  z-index: 100;
+}
+.topbar-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.topbar-logo .logo-jul-ia {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.topbar-title {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.topbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.topbar-right .bi-bell {
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #555, #222);
+  border: 2px solid #555;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── WRAPPER ── */
+.main-wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 72px;
+  background: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  gap: 6px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.sidebar .nav-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.sidebar .nav-icon:hover {
+  background: #2e2e2e;
+  color: #fff;
+}
+.sidebar .nav-icon.active {
+  background: #2e2e2e;
+  color: var(--accent-green);
+}
+.sidebar .spacer {
+  flex: 1;
+}
+
+/* ── CONTENT ── */
+.content-area {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── CARD BASE ── */
+.dash-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+.card-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+/* ══════════════════════════════════════
+         LINHA SUPERIOR — 4 CARDS CIRCULARES
+      ══════════════════════════════════════ */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Topo do card: label + anel (lado a lado) */
+.metric-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.metric-card-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  line-height: 1.3;
+  max-width: 110px;
+}
+
+/* Anel SVG circular */
+.ring-wrap {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+.ring-wrap svg {
+  width: 64px;
+  height: 64px;
+  transform: rotate(-90deg);
+}
+.ring-bg {
+  fill: none;
+  stroke: #e9ecef;
+  stroke-width: 5;
+}
+.ring-fill {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s ease;
+}
+/* Ícone centralizado no anel */
+.ring-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* Valor % grande */
+.metric-percent {
+  font-family: var(--font-mono);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+/* "RESERVA PARA X DIAS" */
+.metric-reserve {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+/* Barra fina embaixo do card */
+.metric-bar-track {
+  height: 3px;
+  border-radius: 2px;
+  background: #e9ecef;
+  margin-top: 4px;
+}
+.metric-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+/* Cores por tipo */
+.ring-blue .ring-fill {
+  stroke: var(--accent-blue);
+}
+.ring-blue .metric-bar-fill {
+  background: var(--accent-blue);
+}
+
+.ring-cyan .ring-fill {
+  stroke: var(--accent-cyan);
+}
+.ring-cyan .metric-bar-fill {
+  background: var(--accent-cyan);
+}
+
+.ring-green .ring-fill {
+  stroke: var(--accent-green);
+}
+.ring-green .metric-bar-fill {
+  background: var(--accent-green);
+}
+
+.ring-yellow .ring-fill {
+  stroke: var(--accent-yellow);
+}
+.ring-yellow .metric-bar-fill {
+  background: var(--accent-yellow);
+}
+
+/* ══════════════════════════════════════
+         LINHA INFERIOR: tabela + carga
+      ══════════════════════════════════════ */
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 14px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── TABELA DE INVENTÁRIO ── */
+.table-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.table-header {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.inv-table thead tr {
+  background: #f8f8f6;
+  border-bottom: 2px solid var(--border);
+}
+.inv-table thead th {
+  padding: 9px 14px;
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.inv-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.15s;
+}
+.inv-table tbody tr:nth-child(even) {
+  background: var(--row-alt);
+}
+.inv-table tbody tr:hover {
+  background: #eef4ff;
+}
+.inv-table tbody td {
+  padding: 8px 14px;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+/* SKU em destaque leve */
+.inv-table .td-sku {
+  color: var(--text-light);
+  font-size: 10px;
+}
+/* Item em negrito */
+.inv-table .td-item {
+  font-weight: 700;
+}
+/* Categoria tag */
+.td-cat {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--accent-blue);
+  background: #e3f2fd;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+/* Scroll apenas na tabela */
+.table-scroll {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+.table-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 2px;
+}
+
+/* ── CARGA A CAMINHO ── */
+.cargo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  min-height: 0;
+}
+.cargo-col::-webkit-scrollbar {
+  width: 4px;
+}
+.cargo-col::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 2px;
+}
+
+.cargo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  flex-shrink: 0;
+}
+
+/* Linha: foguete + status */
+.cargo-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.cargo-rocket-id {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+}
+.cargo-status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.cargo-status.aterrissando {
+  color: var(--accent-green);
+}
+.cargo-status.a-caminho {
+  color: var(--accent-blue);
+}
+.cargo-status.cancelado {
+  color: var(--accent-red);
+}
+
+/* Linha: TEMPO ESTIMADO */
+.cargo-time-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+.cargo-time-val {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* Barra de progresso da carga */
+.cargo-bar-track {
+  height: 3px;
+  border-radius: 2px;
+  background: #696969;
+  margin-bottom: 10px;
+}
+.cargo-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+.cargo-bar-green {
+  background: var(--accent-green);
+}
+.cargo-bar-blue {
+  background: var(--accent-blue);
+}
+.cargo-bar-red {
+  background: var(--accent-red);
+}
+
+/* Descrição do conteúdo da carga */
+.cargo-desc {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: var(--text-mid);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: #f8f8f6;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+
+/* Card de carga cancelado: fundo rosado */
+.cargo-card.cancelado-card {
+  background: #fff5f5;
+  border-color: #ffcdd2;
+}
+
+/* ── LABEL DO PAINEL CARGA ── */
+.cargo-panel-label {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px 10px;
+  flex-shrink: 0;
+}
+
+/* ── STATUS BAR ── */
+.statusbar {
+  background: #1a1a1a;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.statusbar-item {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #888;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.statusbar-item .val-green {
+  color: var(--accent-green);
+}
+.statusbar-item .val-blue {
+  color: var(--accent-blue);
+}
+.statusbar-item .val-white {
+  color: #fff;
+}
+
+/* ══════════════════════════════════════
+         RESPONSIVIDADE
+      ══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+  .cargo-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: visible;
+  }
+  .cargo-card {
+    flex: 1 1 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+  .main-wrapper {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    padding: 0 8px;
+    gap: 0;
+    order: 2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  .sidebar .nav-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+  .sidebar .spacer {
+    display: none;
+  }
+  .content-area {
+    overflow: visible;
+    height: auto;
+    padding: 12px 12px 80px;
+  }
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+  .statusbar {
+    margin-bottom: 60px;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-title {
+    display: none;
+  }
+  .metrics-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .metric-percent {
+    font-size: 28px;
+  }
+}
